@@ -4,7 +4,6 @@ module.exports = {
     description: ``,
     author: ``,
   },
-  pathPrefix: "/pl-style-guide",
   plugins: [
     `gatsby-plugin-react-helmet`,
     {

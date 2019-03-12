@@ -4,6 +4,7 @@ module.exports = {
     description: ``,
     author: ``,
   },
+  pathPrefix: "/procurementleaders",
   plugins: [
     `gatsby-plugin-react-helmet`,
     {

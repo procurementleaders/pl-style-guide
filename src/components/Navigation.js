@@ -12,6 +12,17 @@ const Wrapper = styled.aside`
     list-style: none;
     padding-left: 0;
   }
+  li {
+    font-size: 1.6rem;
+    color: #000000;
+    padding-bottom: 1.5rem;
+  }
+  a {
+    color: #000;
+    text-decoration: none;
+
+    font-family: "Roboto", sans-serif;
+  }
 `
 
 const Navigation = () => {
@@ -23,6 +34,9 @@ const Navigation = () => {
         </li>
         <li>
           <Link to="/typeography">Typography</Link>
+        </li>
+        <li>
+          <Link to="/grid">Grid</Link>
         </li>
       </ol>
     </Wrapper>

@@ -7,7 +7,7 @@ const HeaderWrapper = styled.header`
   .header__inner {
     padding: 3.75rem 4.1875rem;
     width: 100%;
-    max-width: 80rem;
+    max-width: 128rem;
     margin: 0 auto;
   }
 `

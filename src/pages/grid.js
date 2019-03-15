@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 import Layout from "../components/layout"
-import { Paragraph, H1, H2, H3, SubHeader } from "./typeography"
+import { Paragraph, H1, H2, H3, SubHeader } from "./typography"
 
 export const Container = styled.div`
   width: 100%;
@@ -65,7 +65,7 @@ export const CardBody = styled.div`
   padding: 1.5rem;
 `
 
-class Typeography extends Component {
+class Typography extends Component {
   render() {
     const basefont = 16
     return (
@@ -144,4 +144,4 @@ class Typeography extends Component {
   }
 }
 
-export default Typeography
+export default Typography

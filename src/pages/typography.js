@@ -45,11 +45,11 @@ export const SubHeader = styled.p`
   color: #000;
 `
 
-class Typeography extends Component {
+class Typography extends Component {
   render() {
     const basefont = 16
     return (
-      <Layout title="Typeography">
+      <Layout title="Typography">
         <>
           <H1>Heading level 1</H1>
           <pre>
@@ -111,4 +111,4 @@ class Typeography extends Component {
   }
 }
 
-export default Typeography
+export default Typography

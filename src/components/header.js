@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
-import { H1 } from "./../pages/typeography"
+import { H1 } from "./../pages/typography"
 
 const HeaderWrapper = styled.header`
   .header__inner {

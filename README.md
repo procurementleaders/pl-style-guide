@@ -1,5 +1,3 @@
-## PL Style Guide 2019
-
 ## Development
 
 1. Clone repository
@@ -11,3 +9,12 @@
 Updates the GitHub pages website
 
 1. yarn `deploy`
+
+## Includes
+
+- [x] Typeography
+- [ ] Grid
+- [ ] Icons
+- [ ] Navigation
+- [ ] Content display
+- [ ] Buttons

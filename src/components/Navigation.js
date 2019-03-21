@@ -4,9 +4,9 @@ import styled from "styled-components"
 
 const Wrapper = styled.aside`
   width: 100%;
-  background-color: #f4f4f4;
+  border-right: solid 1px #ccc;
   flex: 0;
-  padding: 0.9375rem;
+  padding: 0 1.5rem 0;
 
   ol {
     list-style: none;
@@ -37,6 +37,9 @@ const Navigation = () => {
         </li>
         <li>
           <Link to="/grid">Grid</Link>
+        </li>
+        <li>
+          <Link to="/buttons">Buttons</Link>
         </li>
       </ol>
     </Wrapper>

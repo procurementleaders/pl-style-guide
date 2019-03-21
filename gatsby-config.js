@@ -5,17 +5,6 @@ module.exports = {
     author: ``,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        plugins: [
-          {
-            resolve: "gatsby-remark-code-titles",
-          }, // IMPORTANT: this must be ahead of other plugins that use code blocks
-        ],
-      },
-    },
     `gatsby-plugin-styled-components`,
 
     `gatsby-plugin-react-helmet`,

@@ -62,19 +62,22 @@ function handleCopy(data) {
 function generateOutout(children) {
   try {
     {
-      return children.split(";").map(line => {
-        const parts = line.split(":")
-        if (!parts[0] || !parts[1]) return false
-        return (
-          <LineWrapper key={line}>
-            <Line className>{parts[0].trim()}</Line>
-            <Divider>:</Divider>
-            <Value>{parts[1]}</Value>
-            <Divider>;</Divider>
-            <br />
-          </LineWrapper>
-        )
-      })
+      return children
+        .replace(/\s\s+/g, " ")
+        .split(";")
+        .map(line => {
+          const parts = line.split(":")
+          if (!parts[0] || !parts[1]) return false
+          return (
+            <LineWrapper key={line}>
+              <Line className>{parts[0].trim()}</Line>
+              <Divider>: </Divider>
+              <Value>{parts[1].trim()}</Value>
+              <Divider>;</Divider>
+              <br />
+            </LineWrapper>
+          )
+        })
     }
   } catch (error) {
     console.log({ error })

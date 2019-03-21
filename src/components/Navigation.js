@@ -41,6 +41,15 @@ const Navigation = () => {
         <li>
           <Link to="/buttons">Buttons</Link>
         </li>
+        <li>
+          <Link to="/cards">Cards</Link>
+        </li>
+        <li>
+          <Link to="/icons">Icons</Link>
+        </li>
+        <li>
+          <Link to="/navigation">Navigation</Link>
+        </li>
       </ol>
     </Wrapper>
   )

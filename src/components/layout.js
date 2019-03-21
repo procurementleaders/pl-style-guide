@@ -19,9 +19,8 @@ export const CTX = createContext()
 const Wrapper = styled.div`
   display: flex;
   width: 100%;
-  max-width: 128rem;
+
   margin: 0 auto;
-  padding: 6rem 6.7rem;
   main {
     flex: 1;
     padding: 1.5rem;
@@ -94,9 +93,7 @@ class Layout extends Component {
               <Navigation />
               <CTX.Provider value={{ baseFont }}>
                 <main>
-                  <label htmlFor="baseFont">
-                    <p>Base font</p>
-                  </label>
+                  <label htmlFor="baseFont">Base font </label>
                   <input
                     id="baseFont"
                     name="baseFont"

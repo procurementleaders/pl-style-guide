@@ -105,7 +105,6 @@ class Typography extends Component {
                 </Paragraph>
                 <CSS>
                   {`font-family: 'PT Serif', serif;
-          
                   font-size: ${16 / baseFont}rem;`}
                 </CSS>
               </>

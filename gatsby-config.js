@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `PL Style Guide`,
     description: ``,
+    pathPrefix: "/pl-style-guide",
     author: ``,
   },
   plugins: [

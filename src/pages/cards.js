@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 import Layout, { CTX } from "../components/layout"
-import { Paragraph, H1, H2, H3, SubHeader } from "./typography"
+import { H2, H3 } from "./typography"
 import CSS from "../components/CSS"
 
 export const Container = styled.div`

@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 import Layout, { CTX } from "../components/layout"
+import CSS from "../components/CSS"
 
 export const H1 = styled.h1`
   font-size: 4.4rem;
@@ -54,43 +55,40 @@ class Typography extends Component {
             return (
               <>
                 <H1>Heading level 1</H1>
-                <pre>
-                  font-size: {44 / baseFont}rem; <br />
-                  font-family: 'Roboto', sans-serif; <br />
-                  font-weight: 300;
-                </pre>
+                <CSS>
+                  {`font-size: ${44 / baseFont}rem; font-family: 'Roboto',
+                  sans-serif; font-weight: 300;`}
+                </CSS>
                 <hr />
                 <H2>Heading level 2</H2>
-                <pre>
-                  font-size: {32 / baseFont}rem; <br />
-                  font-family: 'Roboto', sans-serif;
-                  <br />
-                  font-weight: 300;
-                </pre>
+                <CSS>
+                  {`font-size: {32 / baseFont}rem; font-family: 'Roboto',
+                  sans-serif; font-weight: 300;`}
+                </CSS>
                 <hr />
                 <H3>Heading level 3</H3>
-                <pre>
-                  font-size: {32 / baseFont}rem; <br />
+                <CSS>
+                  {`font-size: ${32 / baseFont}rem;
                   font-family: 'Roboto', sans-serif;
-                  <br />
-                  font-weight: 300;
-                </pre>
+                 
+                  font-weight: 300;`}
+                </CSS>
                 <hr />
                 <H4>Heading level 4</H4>
-                <pre>
-                  font-size: {32 / baseFont}rem; <br />
+                <CSS>
+                  {`font-size: ${32 / baseFont}rem;
                   font-family: 'Roboto', sans-serif;
-                  <br />
-                  font-weight: 300;
-                </pre>
+              
+                  font-weight: 300;`}
+                </CSS>
                 <hr />
                 <H5>Heading level 5</H5>
-                <pre>
-                  font-size: {32 / baseFont}rem; <br />
+                <CSS>
+                  {`font-size: ${32 / baseFont}rem;
                   font-family: 'Roboto', sans-serif;
-                  <br />
-                  font-weight: 300;
-                </pre>
+          
+                  font-weight: 300;`}
+                </CSS>
                 <hr />
                 <Paragraph>Paragraph text</Paragraph>
                 <Paragraph>
@@ -105,11 +103,11 @@ class Typography extends Component {
                   elit at, maximus turpis. Ut sollicitudin erat enim, eu
                   convallis nibh posuere ultricies.
                 </Paragraph>
-                <pre>
-                  font-family: 'PT Serif', serif;
-                  <br />
-                  font-size: {16 / baseFont}rem;
-                </pre>
+                <CSS>
+                  {`font-family: 'PT Serif', serif;
+          
+                  font-size: ${16 / baseFont}rem;`}
+                </CSS>
               </>
             )
           }}

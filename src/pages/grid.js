@@ -37,7 +37,7 @@ class Typography extends Component {
               <>
                 <H2>Container</H2>
                 <Wrapper>
-                  <div class="inner">
+                  <div className="inner">
                     <Paragraph>Inner</Paragraph>
                   </div>
                 </Wrapper>

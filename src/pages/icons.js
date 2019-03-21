@@ -1,9 +1,8 @@
 import React, { Component } from "react"
 import styled from "styled-components"
-import { withPrefix, StaticQuery } from "gatsby"
+import { StaticQuery } from "gatsby"
 import Layout, { CTX } from "../components/layout"
-import { Paragraph, H1, H2, H3, SubHeader } from "./typography"
-import CSS from "../components/CSS"
+import { H3 } from "./typography"
 
 const GroupWrapper = styled.section`
   display: flex;
@@ -45,7 +44,12 @@ class Icons extends Component {
                   <StaticQuery
                     query={graphql`
                       query {
-                        allFile(filter: { extension: { eq: "svg" } }) {
+                        allFile(
+                          filter: {
+                            extension: { eq: "svg" }
+                            name: { regex: "/^ci-|^pe-/" }
+                          }
+                        ) {
                           edges {
                             node {
                               name

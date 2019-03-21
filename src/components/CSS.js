@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React from "react"
 import styled from "styled-components"
 
 const Wrapper = styled.pre`
@@ -60,6 +60,12 @@ function handleCopy(data) {
 }
 
 function generateOutout(children) {
+  if (typeof children !== "string")
+    return (
+      <span
+        style={{ color: "#fff" }}
+      >{`The CSS syntax highluter needs a string but received ${typeof children}.`}</span>
+    )
   try {
     {
       return children

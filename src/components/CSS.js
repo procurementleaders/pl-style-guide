@@ -9,6 +9,7 @@ const Wrapper = styled.pre`
   -moz-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
+  min-height: 80px;
 
   :before {
     content: "CSS";
@@ -19,7 +20,6 @@ const Wrapper = styled.pre`
     color: rgba(256, 256, 256, 0.8);
   }
 `
-
 const LineWrapper = styled.span``
 
 const Line = styled.span`
@@ -57,14 +57,12 @@ function handleCopy(data) {
     document.execCommand("copy")
     document.body.removeChild(el)
   }
-  return console.log("no copy :(")
 }
 
-export default ({ children }) => {
-  return (
-    <Wrapper>
-      <CopyButton onClick={() => handleCopy(children)}>COPY</CopyButton>
-      {children.split(";").map(line => {
+function generateOutout(children) {
+  try {
+    {
+      return children.split(";").map(line => {
         const parts = line.split(":")
         if (!parts[0] || !parts[1]) return false
         return (
@@ -76,7 +74,19 @@ export default ({ children }) => {
             <br />
           </LineWrapper>
         )
-      })}
+      })
+    }
+  } catch (error) {
+    console.log({ error })
+    return <p>Error!</p>
+  }
+}
+
+export default ({ children }) => {
+  return (
+    <Wrapper>
+      <CopyButton onClick={() => handleCopy(children)}>COPY</CopyButton>
+      {generateOutout(children)}
     </Wrapper>
   )
 }

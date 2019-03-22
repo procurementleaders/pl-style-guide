@@ -50,6 +50,9 @@ const Navigation = () => {
         <li>
           <Link to="/navigation">Navigation</Link>
         </li>
+        <li>
+          <Link to="/footer">Footer</Link>
+        </li>
       </ol>
     </Wrapper>
   )

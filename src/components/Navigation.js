@@ -5,7 +5,7 @@ import styled from "styled-components"
 const Wrapper = styled.aside`
   width: 100%;
   border-right: solid 1px #ccc;
-  flex: 0;
+  flex: 1;
   padding: 0 1.5rem 0;
 
   ol {

@@ -43,6 +43,12 @@ const CopyButton = styled.button`
   padding: 10px 15px;
   border-radius: 3px;
   cursor: pointer;
+  transition: all .3s ease;
+
+  :hover{
+    background-color: rgba(256, 256, 256, 0.8);
+    color: rgba(0, 0, 0, 0.8);
+  }
 `
 
 function handleCopy(data) {

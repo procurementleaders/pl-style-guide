@@ -28,13 +28,14 @@ const Wrapper = styled.div`
 `
 
 const Footer = styled.footer`
-  padding: 1.5rem;
+  padding: 3.75rem 1.5rem;
   background-color: #000;
 
   .footer-inner {
     width: 100%;
     max-width: 128rem;
     margin: 0 auto;
+    text-align: center;
   }
 
   a,

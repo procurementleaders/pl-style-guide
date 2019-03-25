@@ -46,7 +46,7 @@ class Icons extends Component {
                       query {
                         allFile(
                           filter: {
-                            extension: { eq: "svg" }
+                            extension: { eq: "png" }
                             name: { regex: "/^ci-|^pe-/" }
                           }
                         ) {

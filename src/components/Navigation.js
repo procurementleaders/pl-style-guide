@@ -37,6 +37,12 @@ const Navigation = () => {
         </li>
         <li>
           <Link to="/grid" activeClassName="active">Grid</Link>
+          <br />
+          <Link to="/grid-2-column" activeClassName="active" className="subNav">2 Column Grid</Link>
+          <br />
+          <Link to="/grid-3-column" activeClassName="active" className="subNav">3 Column Grid</Link>
+          <br />
+          <Link to="/grid-4-column" activeClassName="active" className="subNav">4 Column Grid</Link>
         </li>
         <li>
           <Link to="/buttons" activeClassName="active">Buttons</Link>

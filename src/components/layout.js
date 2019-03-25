@@ -29,9 +29,13 @@ const Wrapper = styled.div`
   label{
     font-size: 1.4rem;
   }
-  input{
+  input.base-font{
     margin-left: 5px;
     margin-right: 5px;
+    width: 26px;
+    height: 20px;
+    text-align: center;
+    padding-right: 2px;
   }
 `
 
@@ -102,17 +106,19 @@ class Layout extends Component {
               <Navigation />
               <CTX.Provider value={{ baseFont }}>
                 <main>
-                  <label htmlFor="baseFont">Base font </label>
-                  <input
-                    id="baseFont"
-                    name="baseFont"
-                    value={baseFont}
-                    onChange={this.handleChange}
-                    placeholder="Base font"
-                  />
-                  px
-                  <br />
-                  <hr />
+                  <div className="container-base-font">
+                    <label className="roboto" htmlFor="baseFont">Base font </label>
+                    <input
+                      id="baseFont"
+                      name="baseFont"
+                      value={baseFont}
+                      onChange={this.handleChange}
+                      placeholder="Base font"
+                      className="base-font"
+                    />
+                    <span className="roboto">px</span>
+                  </div>
+
                   {children}
                 </main>
               </CTX.Provider>

@@ -1,5 +1,28 @@
-import React from "react"
-import { CTX } from './layout';
+import React from "react";
+import { CTX } from "./layout";
+import styled from "styled-components";
+
+const Input = styled.div`
+  padding: 0.8rem;
+  margin-top: 1rem;
+  border: 1px solid #ccc;
+  background-color: #f4f4f4;
+  border-radius:3px;
+
+  label, span {
+    font-size: 1.4rem;
+  }
+  input.base-font {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    padding-right: 2px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+  }
+`
 
 const InputFont = (props) => {
   const { changeBaseFont } = props;
@@ -7,7 +30,7 @@ const InputFont = (props) => {
   return (
     <CTX.Consumer>
       {({ baseFont }) => (
-        <div className="container-base-font">
+        <Input>
           <label className="roboto" htmlFor="baseFont">Base font </label>
           <input
             id="baseFont"
@@ -18,7 +41,7 @@ const InputFont = (props) => {
             value={baseFont}
           />
           <span className="roboto">px</span>
-        </div>
+        </Input>
       )}
     </CTX.Consumer>
   );

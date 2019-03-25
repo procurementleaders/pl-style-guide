@@ -15,7 +15,7 @@ const Wrapper = styled.aside`
     position: sticky;
     top: 1.5rem;
     left: 0;
-    padding-left: 1.5rem;
+    padding-left:0;
     margin-top: 1.5rem;
   }
 

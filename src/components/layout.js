@@ -12,7 +12,6 @@ import styled from "styled-components"
 import { StaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Navigation from "./Navigation"
-import InputFont from "./InputFont"
 import "./layout.css"
 
 export const CTX = createContext()
@@ -27,22 +26,6 @@ const Main = styled.div`
   main {
     padding: 1.5rem;
     font-size: 1.4rem;
-  }
-  div.container-base-font {
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #ccc;
-  }
-  label {
-    font-size: 1.4rem;
-  }
-  input.base-font {
-    margin-left: 5px;
-    margin-right: 5px;
-    width: 26px;
-    height: 20px;
-    text-align: center;
-    padding-right: 2px;
   }
 `
 const Footer = styled.footer`

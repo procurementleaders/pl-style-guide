@@ -1,14 +1,16 @@
 import React from "react"
 import { Link } from "gatsby"
+import InputFont from "./InputFont"
 import styled from "styled-components"
+import LogoImage from "../images/pl-logo.svg"
 
 const Wrapper = styled.aside`
   border-right: solid 1px #ccc;
   padding: 0 1.5rem 0;
-  width: 23.04%;
+  width: 100%;
   max-width: 20rem;
 
-  ol {
+  ol.navigation  {
     list-style: none;
     position: sticky;
     top: 1.5rem;
@@ -16,26 +18,57 @@ const Wrapper = styled.aside`
     padding-left: 1.5rem;
     margin-top: 1.5rem;
   }
-  li {
+
+  .navigation li {
     font-size: 1.6rem;
     color: #000000;
     padding-bottom: 1.5rem;
   }
-  a {
+
+  .navigation a {
     color: #000;
     text-decoration: none;
-
     font-family: "Roboto", sans-serif;
+    :hover{
+      text-decoration: underline;
+    }
+  }
+
+  .navigation a.active{
+    font-weight:bold;
+    text-decoration: underline;
+  }
+
+  .navigation .logo a{
+    display: block;
+    text-align: left;
+    padding: 0.75rem 0 3.75rem;
+
+    :hover{
+      text-decoration: none;
+    }
+  }
+  
+  .navigation .logo svg{
+    width: 117px;
+    height: auto;
+  }
+  
+  .navigation .sub-navigation{
+    margin-left: 12px;
   }
 `
 
-const Navigation = () => {
+const Navigation = (props) => {
+  console.log(props)
+  const { changeBaseFont } = props;
   return (
-    <Wrapper>
-      <ol>
-        <li>
-          <Link to="/" activeClassName="active">
-            PL Style Guide
+    <Wrapper >
+      <ol className="navigation">
+        <li className="logo">
+          <Link to="/" >
+            <LogoImage /> <br />
+            Style Guides
           </Link>
         </li>
         <li>
@@ -48,17 +81,12 @@ const Navigation = () => {
             Grid
           </Link>
           <br />
-          <Link to="/grid-2-column" activeClassName="active" className="subNav">
-            2 Column Grid
-          </Link>
+
+          <Link to="/grid-2-column" activeClassName="active" className="sub-navigation">2 Column Grid</Link>
           <br />
-          <Link to="/grid-3-column" activeClassName="active" className="subNav">
-            3 Column Grid
-          </Link>
+          <Link to="/grid-3-column" activeClassName="active" className="sub-navigation">3 Column Grid</Link>
           <br />
-          <Link to="/grid-4-column" activeClassName="active" className="subNav">
-            4 Column Grid
-          </Link>
+          <Link to="/grid-4-column" activeClassName="active" className="sub-navigation">4 Column Grid</Link>
         </li>
         <li>
           <Link to="/buttons" activeClassName="active">
@@ -85,8 +113,14 @@ const Navigation = () => {
             Footer
           </Link>
         </li>
+        <li>
+          <InputFont
+
+            changeBaseFont={changeBaseFont}
+          />
+        </li>
       </ol>
-    </Wrapper>
+    </Wrapper >
   )
 }
 

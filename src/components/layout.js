@@ -12,6 +12,7 @@ import styled from "styled-components"
 import { StaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Navigation from "./Navigation"
+import InputFont from "./InputFont"
 import "./layout.css"
 
 export const CTX = createContext()
@@ -106,35 +107,19 @@ class Layout extends Component {
               />
             </Helmet>
 
-            <Wrapper>
-              <Navigation />
-              <Main>
-                <Header
-                  title={title}
-                  siteTitle={data.site.siteMetadata.title}
+            <CTX.Provider value={{ baseFont }}>
+              <Wrapper>
+                <Navigation
+                  changeBaseFont={this.handleChange}
                 />
-                <CTX.Provider value={{ baseFont }}>
+                <Main>
+                  <Header title={title} siteTitle={data.site.siteMetadata.title} />
                   <main>
-                    <div className="container-base-font">
-                      <label className="roboto" htmlFor="baseFont">
-                        Base font{" "}
-                      </label>
-                      <input
-                        id="baseFont"
-                        name="baseFont"
-                        value={baseFont}
-                        onChange={this.handleChange}
-                        placeholder="Base font"
-                        className="base-font"
-                      />
-                      <span className="roboto">px</span>
-                    </div>
-
                     {children}
                   </main>
-                </CTX.Provider>
-              </Main>
-            </Wrapper>
+                </Main>
+              </Wrapper>
+            </CTX.Provider>
 
             <Footer>
               <div className="footer-inner">

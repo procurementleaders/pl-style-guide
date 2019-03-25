@@ -19,10 +19,12 @@ export const CTX = createContext()
 const Wrapper = styled.div`
   display: flex;
   width: 100%;
-
   margin: 0 auto;
+  
+`
+const Main = styled.div`
+  flex: 9;
   main {
-    flex: 8;
     padding: 1.5rem;
     font-size: 1.4rem;
   }
@@ -43,7 +45,6 @@ const Wrapper = styled.div`
     padding-right: 2px;
   }
 `
-
 const Footer = styled.footer`
   padding: 3.75rem 1.5rem;
   background-color: #000;
@@ -105,27 +106,33 @@ class Layout extends Component {
                 rel="stylesheet"
               />
             </Helmet>
-            <Header title={title} siteTitle={data.site.siteMetadata.title} />
+
+
+
+
             <Wrapper>
               <Navigation />
-              <CTX.Provider value={{ baseFont }}>
-                <main>
-                  <div className="container-base-font">
-                    <label className="roboto" htmlFor="baseFont">Base font </label>
-                    <input
-                      id="baseFont"
-                      name="baseFont"
-                      value={baseFont}
-                      onChange={this.handleChange}
-                      placeholder="Base font"
-                      className="base-font"
-                    />
-                    <span className="roboto">px</span>
-                  </div>
+              <Main>
+                <Header title={title} siteTitle={data.site.siteMetadata.title} />
+                <CTX.Provider value={{ baseFont }}>
+                  <main>
+                    <div className="container-base-font">
+                      <label className="roboto" htmlFor="baseFont">Base font </label>
+                      <input
+                        id="baseFont"
+                        name="baseFont"
+                        value={baseFont}
+                        onChange={this.handleChange}
+                        placeholder="Base font"
+                        className="base-font"
+                      />
+                      <span className="roboto">px</span>
+                    </div>
 
-                  {children}
-                </main>
-              </CTX.Provider>
+                    {children}
+                  </main>
+                </CTX.Provider>
+              </Main>
             </Wrapper>
 
             <Footer>

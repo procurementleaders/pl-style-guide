@@ -10,7 +10,10 @@ const Wrapper = styled.aside`
 
   ol {
     list-style: none;
-    padding-left: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 15px;
   }
   li {
     font-size: 1.6rem;
@@ -30,7 +33,7 @@ const Navigation = () => {
     <Wrapper>
       <ol>
         <li>
-          <Link to="/" activeClassName="active">Home</Link>
+          <Link to="/" activeClassName="active">PL Style Guide</Link>
         </li>
         <li>
           <Link to="/typography" activeClassName="active">Typography</Link>

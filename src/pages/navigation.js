@@ -28,7 +28,6 @@ const Logo = styled.div`
     height: auto;
     margin-right: 3rem;
     vertical-align: middle;
-
   }
 `
 
@@ -92,9 +91,7 @@ class Navigation extends Component {
 
                     <RightNav >
 
-
                     </RightNav>
-
                   </div>
                 </PrimaryNav>
 
@@ -115,7 +112,6 @@ class Navigation extends Component {
                 </CSS>
 
                 <H3>Logo</H3>
-
                 <Logo>
                   <LogoImage />
                 </Logo>
@@ -168,39 +164,28 @@ class Navigation extends Component {
                 </CSS>
 
                 <H3>:hover Navigation link</H3>
-
                 <CSS>
-                  {`
-                   text-decoration: underline;
-                    color: #000000;
-
-                    
-                  `}
+                  {`text-decoration: underline;
+                    color: #000000;`}
                 </CSS>
 
                 <H3>Search</H3>
 
                 <CSS>
-                  {`
-                    font-size: ${15 / baseFont}rem;
+                  {`font-size: ${15 / baseFont}rem;
                     font-family: 'Roboto', sans-serif;                 
-                    font-weight: 300;
-                  `}
+                    font-weight: 300;`}
                 </CSS>
 
                 <H3>Avatar</H3>
-
                 <CSS>
-                  {`
-                        width: 38px;
-                        height: 38px;
-                        border-radius: 50%;
-                        border: 1px solid #cccccc;
-                  `}
+                  {`width: 38px;
+                    height: 38px;
+                    border-radius: 50%;
+                    border: 1px solid #cccccc;`}
                 </CSS>
 
                 <H2>Footer</H2>
-
                 <Footer>
                   <div className="inner" />
                 </Footer>

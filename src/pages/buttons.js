@@ -20,6 +20,11 @@ const PrimaryButton = styled.a`
   cursor: pointer;
   display: inline-block;
   position: relative;
+  
+
+  :hover{
+    text-decoration: none;
+  }
 
   :before {
     content: "";
@@ -52,6 +57,9 @@ const SecondaryButton = styled.a`
   display: inline-block;
   cursor: pointer;
   position: relative;
+  :hover{
+    text-decoration: none;
+  }
 
   :before {
     content: "";
@@ -85,6 +93,9 @@ const SupportingButton = styled.a`
   cursor: pointer;
   position: relative;
 
+  :hover{
+    text-decoration: none;
+  }
   :before {
     content: "";
     position: absolute;
@@ -130,7 +141,7 @@ class Buttons extends Component {
                 <p>:hover:before</p>
                 <CSS>width: 100%;</CSS>
                 <hr />
-                <SecondaryButton>Seondary</SecondaryButton>
+                <SecondaryButton>Secondary</SecondaryButton>
                 <CSS>
                   {`background-color: #d1d1d1; -webkit-border-radius: 3px;
                   -moz-border-radius: 3px; -o-border-radius: 3px; border-radius:

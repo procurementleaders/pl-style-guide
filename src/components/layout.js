@@ -26,6 +26,11 @@ const Wrapper = styled.div`
     padding: 1.5rem;
     font-size: 1.4rem;
   }
+  div.container-base-font{
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+  }
   label{
     font-size: 1.4rem;
   }
@@ -94,14 +99,13 @@ class Layout extends Component {
         `}
         render={data => (
           <>
-            <Header title={title} siteTitle={data.site.siteMetadata.title} />
             <Helmet>
               <link
                 href="https://fonts.googleapis.com/css?family=PT+Serif|Roboto:300,400,700"
                 rel="stylesheet"
               />
             </Helmet>
-
+            <Header title={title} siteTitle={data.site.siteMetadata.title} />
             <Wrapper>
               <Navigation />
               <CTX.Provider value={{ baseFont }}>

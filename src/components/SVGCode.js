@@ -75,7 +75,6 @@ function generateOutout(children) {
             )
         }
     } catch (error) {
-        console.log({ error })
         return <p>Error!</p>
     }
 }

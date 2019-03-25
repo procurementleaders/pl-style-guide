@@ -60,7 +60,6 @@ const Wrapper = styled.aside`
 `
 
 const Navigation = (props) => {
-  console.log(props)
   const { changeBaseFont } = props;
   return (
     <Wrapper >

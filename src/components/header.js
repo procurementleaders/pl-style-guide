@@ -4,6 +4,8 @@ import styled from "styled-components"
 import { H1 } from "./../pages/typography"
 
 const HeaderWrapper = styled.header`
+  width: 100%;
+  overflow-x: hidden;
   .header__inner {
     padding: 3.75rem 1.5rem;
     width: 100%;

@@ -20,23 +20,22 @@ const Wrapper = styled.div`
   display: flex;
   width: 100%;
   margin: 0 auto;
-  
 `
 const Main = styled.div`
-  flex: 9;
+  flex: 1;
   main {
     padding: 1.5rem;
     font-size: 1.4rem;
   }
-  div.container-base-font{
+  div.container-base-font {
     padding-bottom: 1rem;
     margin-bottom: 1rem;
     border-bottom: 1px solid #ccc;
   }
-  label{
+  label {
     font-size: 1.4rem;
   }
-  input.base-font{
+  input.base-font {
     margin-left: 5px;
     margin-right: 5px;
     width: 26px;
@@ -107,17 +106,19 @@ class Layout extends Component {
               />
             </Helmet>
 
-
-
-
             <Wrapper>
               <Navigation />
               <Main>
-                <Header title={title} siteTitle={data.site.siteMetadata.title} />
+                <Header
+                  title={title}
+                  siteTitle={data.site.siteMetadata.title}
+                />
                 <CTX.Provider value={{ baseFont }}>
                   <main>
                     <div className="container-base-font">
-                      <label className="roboto" htmlFor="baseFont">Base font </label>
+                      <label className="roboto" htmlFor="baseFont">
+                        Base font{" "}
+                      </label>
                       <input
                         id="baseFont"
                         name="baseFont"

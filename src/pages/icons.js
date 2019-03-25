@@ -17,9 +17,7 @@ const IconWrapper = styled.div`
   h3 {
     margin-top:0;
     text-transform: Capitalize;
-    font-size: 1.6 
-    
-    rem;
+    font-size: 1.6rem;
   }
   img {
     width: 100%;

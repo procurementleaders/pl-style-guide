@@ -5,10 +5,9 @@ import { H1 } from "./../pages/typography"
 
 const HeaderWrapper = styled.header`
   .header__inner {
-    padding: 3.75rem 4.1875rem;
+    padding: 3.75rem 1.5rem;
     width: 100%;
-    max-width: 128rem;
-    margin: 0 auto;
+    border-bottom: 1px solid #ccc;
   }
 `
 

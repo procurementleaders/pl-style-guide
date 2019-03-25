@@ -22,19 +22,28 @@ const Wrapper = styled.div`
 
   margin: 0 auto;
   main {
-    flex: 1;
+    flex: 8;
     padding: 1.5rem;
+    font-size: 1.4rem;
+  }
+  label{
+    font-size: 1.4rem;
+  }
+  input{
+    margin-left: 5px;
+    margin-right: 5px;
   }
 `
 
 const Footer = styled.footer`
-  padding: 1.5rem;
+  padding: 3.75rem 1.5rem;
   background-color: #000;
 
   .footer-inner {
     width: 100%;
     max-width: 128rem;
     margin: 0 auto;
+    text-align: center;
   }
 
   a,

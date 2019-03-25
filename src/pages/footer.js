@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import styled from "styled-components"
-import { H2, H3 } from "./typography"
+import { H2, H3, H4 } from "./typography"
 import Layout, { CTX } from "../components/layout"
 import CSS from '../components/CSS'
 import LogoImg from "../images/pl-logo.svg"
@@ -9,10 +9,11 @@ import LogoImg from "../images/pl-logo.svg"
 const FooterWrapper = styled.footer`
   width: 100%;
   background-color: #000;
-  
-`
+`;
+
 const InvertedPlLogo = styled.div`
     display:inline-block;
+    margin-right: 3rem;
     svg{
         vertical-align: middle;
         height: auto;
@@ -27,7 +28,23 @@ const InvertedPlLogo = styled.div`
             fill:#fff
         }
     }
-`
+`;
+
+const FooterLink = styled.span`
+    padding: .3rem 0;
+    letter-spacing: .02em;
+    color: #AAAAAA;
+    display: inline-block;
+    font-weight: 300;
+    cursor: pointer;
+    font-family: Roboto,sans-serif;
+    font-size:1.4rem;
+    :hover{
+        color: #FFFFFF;
+        text-decoration: underline;
+    }
+`;
+
 
 class Footer extends Component {
     render() {
@@ -45,6 +62,7 @@ class Footer extends Component {
                                         <InvertedPlLogo >
                                             <LogoImg />
                                         </InvertedPlLogo>
+                                        <FooterLink>Example link</FooterLink>
                                     </div>
                                 </FooterWrapper>
 
@@ -58,9 +76,24 @@ class Footer extends Component {
                                 <H3>Footer inner</H3>
 
                                 <CSS>{`width: ${1280 / baseFont}rem;
-                                height: auto;
-                                padding:  ${ 16 / baseFont}rem ${67 / baseFont}rem;
-                                `}</CSS>
+                                    height: auto;
+                                    padding:  ${ 16 / baseFont}rem ${67 / baseFont}rem;`}
+                                </CSS>
+
+                                <H3>Links</H3>
+                                <H4>a</H4>
+                                <CSS>{`text-decoration: none;
+                                        padding: .3rem 0;
+                                        letter-spacing: .02em;
+                                        color: #AAAAAA;
+                                        font-size:  ${ 14 / baseFont}rem;
+                                        display: inline-block;
+                                        font-weight: 300;`}
+                                </CSS>
+                                <H4>a:hover</H4>
+                                <CSS>{`color: #FFFFFF;
+                                    text-decoration: underline;`}
+                                </CSS>
                             </>
                         )
                     }}

@@ -15,10 +15,17 @@ const IconWrapper = styled.div`
   border: solid 1px #ccc;
   padding: 1.5rem;
   h3 {
+    margin-top:0;
+    text-transform: Capitalize;
+    font-size: 1.6 
+    
+    rem;
   }
   img {
     width: 100%;
-    max-width: 100%;
+    max-width: 40px;
+    height: auto;
+    margin: 1rem 0;
   }
 `
 
@@ -68,6 +75,10 @@ class Icons extends Component {
                                 ? "Procurement Excellence"
                                 : "Category Intelligence"}
                             </SectionTitle>
+                            <img
+                              src={item.node.publicURL}
+                              alt={item.node.name}
+                            />
                             <H3>
                               {item.node.name
                                 .substr(3)
@@ -81,10 +92,7 @@ class Icons extends Component {
                                   return <span key={part}>{part}</span>
                                 })}
                             </H3>
-                            <img
-                              src={item.node.publicURL}
-                              alt={item.node.name}
-                            />
+
                           </IconWrapper>
                         )
                       })

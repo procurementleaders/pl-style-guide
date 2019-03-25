@@ -25,6 +25,9 @@ export const Inner = styled.div`
   margin: 0 auto;
   padding: 6rem 6.7rem;
   display: flex;
+  h1{
+    margin:0;
+  }
 `
 
 class Typography extends Component {
@@ -42,25 +45,27 @@ class Typography extends Component {
                   </div>
                 </Wrapper>
 
-                <p>Wrapper</p>
+                <H3>Wrapper</H3>
                 <CSS>width: 100%</CSS>
 
-                <p>Inner</p>
+                <H3>Inner</H3>
                 <CSS>
-                  width: 100%; max-width: 128rem; margin: 0 auto; padding: 6rem
-                  6.7rem;
+                  {`width: 100%;
+                  max-width: ${1280 / baseFont}rem;
+                  margin: 0 auto;
+                  padding: ${60 / baseFont}rem ${67 / baseFont}rem;`}
                 </CSS>
 
                 <H2>Header</H2>
                 <Container
                   style={{
-                    border: "solid 1px red",
+                    border: "1px solid #ccc",
                     backgroundColor: "#f4f4f4",
                   }}
                 >
                   <Inner
                     style={{
-                      border: "solid 1px green",
+
                       flexDirection: "column",
                     }}
                   >
@@ -69,13 +74,29 @@ class Typography extends Component {
                   </Inner>
                 </Container>
 
-                <p>Wrapper</p>
-                <CSS>width: 100%; background-color: #f4f4f4;</CSS>
-
-                <p>Inner</p>
+                <H3>Wrapper</H3>
                 <CSS>
-                  width: 100%; max-width: 128rem; margin: 0 auto; padding: 6rem
-                  6.7rem;
+                  {`width: 100%;
+                  background-color: #f4f4f4;`}
+                </CSS>
+
+                <H3>Inner</H3>
+                <CSS>
+                  {`width: 100%;
+                  max-width: ${1280 / baseFont}rem;
+                  margin: 0 auto;
+                  padding: ${60 / baseFont}rem ${67 / baseFont}rem;`}
+                </CSS>
+
+                <H3>h1</H3>
+                <CSS>
+                  {`margin: 0;`}
+                </CSS>
+                <H3>p</H3>
+                <CSS>
+                  {`margin-top: ${12 / baseFont}rem;
+                  max-width: ${852 / baseFont}rem;
+                  font-size: ${16 / baseFont}rem;`}
                 </CSS>
               </>
             )

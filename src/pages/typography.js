@@ -56,40 +56,46 @@ class Typography extends Component {
               <>
                 <H1>Heading level 1</H1>
                 <CSS>
-                  {`font-size: ${44 / baseFont}rem; font-family: 'Roboto',
-                  sans-serif; font-weight: 300;`}
+                  {`font-size: ${44 / baseFont}rem;
+                    font-family: 'Roboto',
+                    sans-serif; font-weight: 300;`}
                 </CSS>
-                <hr />
+
                 <H2>Heading level 2</H2>
                 <CSS>
-                  {`font-size: {32 / baseFont}rem; font-family: 'Roboto',
-                  sans-serif; font-weight: 300;`}
+                  {`font-size: ${32 / baseFont}rem;
+                    font-family: 'Roboto',
+                    sans-serif; font-weight: 300;`}
                 </CSS>
-                <hr />
+
                 <H3>Heading level 3</H3>
                 <CSS>
-                  {`font-size: ${32 / baseFont}rem;
-                  font-family: 'Roboto', sans-serif;
-                 
-                  font-weight: 300;`}
+                  {`font-size: ${21 / baseFont}rem;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 300;`}
                 </CSS>
-                <hr />
+
                 <H4>Heading level 4</H4>
                 <CSS>
-                  {`font-size: ${32 / baseFont}rem;
-                  font-family: 'Roboto', sans-serif;
-              
-                  font-weight: 300;`}
+                  {`font-size: ${17 / baseFont}rem;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 300;`}
                 </CSS>
-                <hr />
+
                 <H5>Heading level 5</H5>
                 <CSS>
-                  {`font-size: ${32 / baseFont}rem;
-                  font-family: 'Roboto', sans-serif;
-          
-                  font-weight: 300;`}
+                  {`font-size: ${14 / baseFont}rem;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 300;`}
                 </CSS>
-                <hr />
+
+                <H5>Heading level 5</H5>
+                <CSS>
+                  {`font-size: ${12 / baseFont}rem;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 300;`}
+                </CSS>
+
                 <Paragraph>Paragraph text</Paragraph>
                 <Paragraph>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.

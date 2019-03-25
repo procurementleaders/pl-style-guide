@@ -30,28 +30,28 @@ const Navigation = () => {
     <Wrapper>
       <ol>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/" activeClassName="active">Home</Link>
         </li>
         <li>
-          <Link to="/typography">Typography</Link>
+          <Link to="/typography" activeClassName="active">Typography</Link>
         </li>
         <li>
-          <Link to="/grid">Grid</Link>
+          <Link to="/grid" activeClassName="active">Grid</Link>
         </li>
         <li>
-          <Link to="/buttons">Buttons</Link>
+          <Link to="/buttons" activeClassName="active">Buttons</Link>
         </li>
         <li>
-          <Link to="/cards">Cards</Link>
+          <Link to="/cards" activeClassName="active">Cards</Link>
         </li>
         <li>
-          <Link to="/icons">Icons</Link>
+          <Link to="/icons" activeClassName="active">Icons</Link>
         </li>
         <li>
-          <Link to="/navigation">Navigation</Link>
+          <Link to="/primary-navigation" activeClassName="active">Primary navigation</Link>
         </li>
         <li>
-          <Link to="/footer">Footer</Link>
+          <Link to="/footer" activeClassName="active">Footer</Link>
         </li>
       </ol>
     </Wrapper>

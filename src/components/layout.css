@@ -34,7 +34,24 @@ pre {
   font-size: 1.6rem;
 }
 
-/* */
+/* General styles */
+.roboto{
+  font-family: Roboto, sans-serif;
+}
+
+a{
+  font-family: Roboto, sans-serif;
+  font-size: 1.4rem;
+  color: #000000;
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+/* inner element for title and example */
 
 .inner-header {
   max-width: 128rem;
@@ -51,26 +68,4 @@ pre {
   display: flex;
   align-content: center;
   align-items: center;
-}
-a{
-  font-family: Roboto, sans-serif;
-  font-size: 1.4rem;
-  color: #000000;
-  text-decoration: none;
-  line-height: 1.5;
-}
-a:hover{
-  text-decoration: underline;
-}
-.roboto{
-  font-family: Roboto, sans-serif;
-}
-
-a.active{
-  font-weight:bold;
-  text-decoration: underline;
-}
-
-.subNav{
-  margin-left: 12px;
 }

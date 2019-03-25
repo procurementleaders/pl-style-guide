@@ -5,19 +5,18 @@ import styled from "styled-components"
 import LogoImage from "../images/pl-logo.svg"
 
 const Wrapper = styled.aside`
-  width: 100%;
   border-right: solid 1px #ccc;
-  width:200px;
   padding: 0 1.5rem 0;
-  min-height: 700px;
+  width: 100%;
+  max-width: 20rem;
 
   ol.navigation  {
     list-style: none;
-    position: fixed;
-    top: 0;
+    position: sticky;
+    top: 1.5rem;
     left: 0;
-    padding-left: 15px;
-    width: 200px;
+    padding-left: 1.5rem;
+    margin-top: 1.5rem;
   }
 
   .navigation li {
@@ -73,11 +72,16 @@ const Navigation = (props) => {
           </Link>
         </li>
         <li>
-          <Link to="/typography" activeClassName="active">Typography</Link>
+          <Link to="/typography" activeClassName="active">
+            Typography
+          </Link>
         </li>
         <li>
-          <Link to="/grid" activeClassName="active">Grid</Link>
+          <Link to="/grid" activeClassName="active">
+            Grid
+          </Link>
           <br />
+
           <Link to="/grid-2-column" activeClassName="active" className="sub-navigation">2 Column Grid</Link>
           <br />
           <Link to="/grid-3-column" activeClassName="active" className="sub-navigation">3 Column Grid</Link>
@@ -85,19 +89,29 @@ const Navigation = (props) => {
           <Link to="/grid-4-column" activeClassName="active" className="sub-navigation">4 Column Grid</Link>
         </li>
         <li>
-          <Link to="/buttons" activeClassName="active">Buttons</Link>
+          <Link to="/buttons" activeClassName="active">
+            Buttons
+          </Link>
         </li>
         <li>
-          <Link to="/cards" activeClassName="active">Cards</Link>
+          <Link to="/cards" activeClassName="active">
+            Cards
+          </Link>
         </li>
         <li>
-          <Link to="/icons" activeClassName="active">Icons</Link>
+          <Link to="/icons" activeClassName="active">
+            Icons
+          </Link>
         </li>
         <li>
-          <Link to="/primary-navigation" activeClassName="active">Primary navigation</Link>
+          <Link to="/primary-navigation" activeClassName="active">
+            Primary navigation
+          </Link>
         </li>
         <li>
-          <Link to="/footer" activeClassName="active">Footer</Link>
+          <Link to="/footer" activeClassName="active">
+            Footer
+          </Link>
         </li>
         <li>
           <InputFont

@@ -61,7 +61,7 @@ a:hover{
   align-content: center;
   align-items: center;
 }
-.inner{
+.inner {
   max-width: 128rem;
   margin: 0 auto;
   padding: 3.75rem 4.1875rem;
@@ -69,3 +69,30 @@ a:hover{
   align-content: center;
   align-items: center;
 }
+a {
+  font-family: Roboto, sans-serif;
+  font-size: 1.4rem;
+  color: #000000;
+  text-decoration: none;
+  line-height: 1.5;
+}
+a:hover {
+  text-decoration: underline;
+}
+.roboto {
+  font-family: Roboto, sans-serif;
+}
+
+a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.subNav {
+  margin-left: 12px;
+}
+
+#___gatsby {
+  height: 100%;
+}
+

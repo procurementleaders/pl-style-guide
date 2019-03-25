@@ -53,6 +53,7 @@ pre {
   align-items: center;
 }
 a{
+  font-family: Roboto, sans-serif;
   font-size: 1.4rem;
   color: #000000;
   text-decoration: none;
@@ -60,4 +61,7 @@ a{
 }
 a:hover{
   text-decoration: underline;
+}
+.roboto{
+  font-family: Roboto, sans-serif;
 }

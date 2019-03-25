@@ -12,6 +12,10 @@ const HeaderWrapper = styled.header`
   }
 `
 
+const PageTitle = styled(H1)`
+  margin: 0;
+`
+
 const Header = ({ siteTitle, title }) => (
   <HeaderWrapper
     style={{
@@ -19,7 +23,7 @@ const Header = ({ siteTitle, title }) => (
     }}
   >
     <div className="header__inner">
-      <H1>{title || siteTitle}</H1>
+      <PageTitle>{title || siteTitle}</PageTitle>
     </div>
   </HeaderWrapper>
 )

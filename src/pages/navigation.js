@@ -41,7 +41,10 @@ const NavLink = styled.span`
 `
 
 const RightNav = styled.div`
-  float: right;
+  width: 40px;
+  height: 40px;
+  background: #eee;
+  margin-left: auto;
 `;
 
 const SVGcode = styled.div`
@@ -89,6 +92,7 @@ class Navigation extends Component {
 
                     <RightNav >
 
+
                     </RightNav>
 
                   </div>
@@ -123,6 +127,11 @@ class Navigation extends Component {
                     vertical-align: middle;`}
                 </CSS>
 
+                <H4>Logo urls (png files)</H4>
+                <ol>
+                  <li><a href="https://www.procurementleaders.com/AcuCustom/Sitename/Icon/Logo/procurement-leaders-logo.png" target="blank">Big logo png</a></li>
+                  <li><a href="https://www.procurementleaders.com/AcuCustom/Sitename/Icon/Logo/procurement-leaders-logo-2019.png" target="blank">Small logo png</a></li>
+                </ol>
 
                 <H4>Logo SVG</H4>
                 <SVGcode>

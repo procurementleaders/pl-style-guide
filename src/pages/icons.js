@@ -59,6 +59,7 @@ const SectionTitle = styled.p`
 
 class Icons extends Component {
   render() {
+    console.log("test")
     return (
       <Layout title="Icons">
         <CTX.Consumer>

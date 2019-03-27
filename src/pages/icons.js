@@ -123,8 +123,6 @@ class Icons extends Component {
                         item => String(item.node.name).substr(0, 3) === "en-"
                       )
 
-                      console.log(profileIcons, companyIcons, enIcons)
-
                       return (
                         <>
                           <H2>Procurement Excellence icons</H2>

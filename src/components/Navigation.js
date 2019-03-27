@@ -10,13 +10,19 @@ const Wrapper = styled.aside`
   width: 100%;
   max-width: 20rem;
 
-  ol.navigation  {
+  ol.navigation {
     list-style: none;
     position: sticky;
     top: 1.5rem;
     left: 0;
-    padding-left:0;
+    padding-left: 0;
     margin-top: 1.5rem;
+  }
+
+  p.top-navigation {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: "Roboto", sans-serif;
   }
 
   .navigation li {
@@ -29,43 +35,43 @@ const Wrapper = styled.aside`
     color: #000;
     text-decoration: none;
     font-family: "Roboto", sans-serif;
-    :hover{
+    :hover {
       text-decoration: underline;
     }
   }
 
-  .navigation a.active{
-    font-weight:bold;
+  .navigation a.active {
+    font-weight: bold;
     text-decoration: underline;
   }
 
-  .navigation .logo a{
+  .navigation .logo a {
     display: block;
     text-align: left;
     padding: 0.75rem 0 3.75rem;
 
-    :hover{
+    :hover {
       text-decoration: none;
     }
   }
-  
-  .navigation .logo svg{
+
+  .navigation .logo svg {
     width: 117px;
     height: auto;
   }
-  
-  .navigation .sub-navigation{
+
+  .navigation .sub-navigation {
     margin-left: 12px;
   }
 `
 
-const Navigation = (props) => {
-  const { changeBaseFont } = props;
+const Navigation = props => {
+  const { changeBaseFont } = props
   return (
-    <Wrapper >
+    <Wrapper>
       <ol className="navigation">
         <li className="logo">
-          <Link to="/" >
+          <Link to="/">
             <LogoImage /> <br />
             Style Guides
           </Link>
@@ -76,16 +82,33 @@ const Navigation = (props) => {
           </Link>
         </li>
         <li>
-          <Link to="/grid" activeClassName="active">
-            Grid
-          </Link>
+          <p className="top-navigation">Grid</p>
+
           <br />
 
-          <Link to="/grid-2-column" activeClassName="active" className="sub-navigation">2 Column Grid</Link>
+          <Link
+            to="/grid-2-column"
+            activeClassName="active"
+            className="sub-navigation"
+          >
+            2 Column Grid
+          </Link>
           <br />
-          <Link to="/grid-3-column" activeClassName="active" className="sub-navigation">3 Column Grid</Link>
+          <Link
+            to="/grid-3-column"
+            activeClassName="active"
+            className="sub-navigation"
+          >
+            3 Column Grid
+          </Link>
           <br />
-          <Link to="/grid-4-column" activeClassName="active" className="sub-navigation">4 Column Grid</Link>
+          <Link
+            to="/grid-4-column"
+            activeClassName="active"
+            className="sub-navigation"
+          >
+            4 Column Grid
+          </Link>
         </li>
         <li>
           <Link to="/buttons" activeClassName="active">
@@ -113,13 +136,20 @@ const Navigation = (props) => {
           </Link>
         </li>
         <li>
-          <InputFont
-
-            changeBaseFont={changeBaseFont}
-          />
+          <p className="top-navigation">Design</p>
+          <Link
+            to="/colors"
+            activeClassName="active"
+            className="sub-navigation"
+          >
+            Colours
+          </Link>
+        </li>
+        <li>
+          <InputFont changeBaseFont={changeBaseFont} />
         </li>
       </ol>
-    </Wrapper >
+    </Wrapper>
   )
 }
 

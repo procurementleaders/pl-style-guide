@@ -38,28 +38,28 @@ const IndexPage = () => (
     <Wrapper>
       <H2>Introduction</H2>
       <P>
-        The Digital Team created this styleguide to act as a central location
+        The Digital Team created this style guide to act as a central location
         where we house a live inventory of UI components, brand guidelines,
         brand assets, code snippets, developer guidelines and more.
       </P>
       <P>
         Anyone working on the Procurement Leaders product is encouraged to stay
-        familiar with this styleguide and help ensure that it is kept
+        familiar with this style guide and help ensure that it is kept
         up-to-date.
       </P>
       <br />
       <Box>
-        <H4>What is the Procurement Leader styleguide?</H4>
+        <H4>What is the Procurement Leader style guide?</H4>
         <P>
-          Our styleguide is a live inventory of UI components, design patterns,
+          Our style guide is a live inventory of UI components, design patterns,
           brand assets and code guidelines which the whole Procurement Leaders
           team work from, keeping all of our products cohesive.
         </P>
       </Box>
       <Box>
-        <H4>Why do we develop this styleguide?</H4>
+        <H4>Why did we develop this style guide?</H4>
         <P>
-          This styleguide is the central hub and new updates are pushed here
+          This style guide is the central hub and new updates are pushed here
           first, then trickle down to our live products. This will allow us
           develop a single, unified system that is transferrable across all
           platforms and devices.

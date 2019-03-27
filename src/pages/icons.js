@@ -59,7 +59,9 @@ class Icons extends Component {
                         allFile(
                           filter: {
                             extension: { eq: "svg" }
-                            name: { regex: "/^ci-|^pe-/" }
+                            name: {
+                              regex: "/^ci-|^pe-|^en-|^company-|^profile-/"
+                            }
                           }
                         ) {
                           edges {
@@ -78,6 +80,19 @@ class Icons extends Component {
                       const peIcons = data.allFile.edges.filter(
                         item => String(item.node.name).substr(0, 3) === "pe-"
                       )
+                      const profileIcons = data.allFile.edges.filter(
+                        item =>
+                          String(item.node.name).substr(0, 8) === "profile-"
+                      )
+                      const companyIcons = data.allFile.edges.filter(
+                        item =>
+                          String(item.node.name).substr(0, 8) === "company-"
+                      )
+                      const enIcons = data.allFile.edges.filter(
+                        item => String(item.node.name).substr(0, 3) === "en-"
+                      )
+
+                      console.log(profileIcons, companyIcons, enIcons)
 
                       return (
                         <>
@@ -120,6 +135,90 @@ class Icons extends Component {
                                 <H3>
                                   {item.node.name
                                     .substr(3)
+                                    .split("-")
+                                    .map((part, index) => {
+                                      if (
+                                        index !==
+                                        item.node.name.split("-").length
+                                      ) {
+                                        return (
+                                          <span key={part}>{`${part} `}</span>
+                                        )
+                                      }
+                                      return <span key={part}>{part}</span>
+                                    })}
+                                </H3>
+                              </IconWrapper>
+                            )
+                          })}
+
+                          <H2>Expert Network icons</H2>
+                          {enIcons.map(item => {
+                            return (
+                              <IconWrapper key={item.node.name}>
+                                <img
+                                  src={item.node.publicURL}
+                                  alt={item.node.name}
+                                />
+                                <H3>
+                                  {item.node.name
+                                    .substr(3)
+                                    .split("-")
+                                    .map((part, index) => {
+                                      if (
+                                        index !==
+                                        item.node.name.split("-").length
+                                      ) {
+                                        return (
+                                          <span key={part}>{`${part} `}</span>
+                                        )
+                                      }
+                                      return <span key={part}>{part}</span>
+                                    })}
+                                </H3>
+                              </IconWrapper>
+                            )
+                          })}
+
+                          <H2>Company icons</H2>
+                          {companyIcons.map(item => {
+                            return (
+                              <IconWrapper key={item.node.name}>
+                                <img
+                                  src={item.node.publicURL}
+                                  alt={item.node.name}
+                                />
+                                <H3>
+                                  {item.node.name
+                                    .substr(8)
+                                    .split("-")
+                                    .map((part, index) => {
+                                      if (
+                                        index !==
+                                        item.node.name.split("-").length
+                                      ) {
+                                        return (
+                                          <span key={part}>{`${part} `}</span>
+                                        )
+                                      }
+                                      return <span key={part}>{part}</span>
+                                    })}
+                                </H3>
+                              </IconWrapper>
+                            )
+                          })}
+
+                          <H2>Profile icons</H2>
+                          {profileIcons.map(item => {
+                            return (
+                              <IconWrapper key={item.node.name}>
+                                <img
+                                  src={item.node.publicURL}
+                                  alt={item.node.name}
+                                />
+                                <H3>
+                                  {item.node.name
+                                    .substr(8)
                                     .split("-")
                                     .map((part, index) => {
                                       if (

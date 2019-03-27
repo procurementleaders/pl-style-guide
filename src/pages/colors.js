@@ -6,7 +6,7 @@ import { H2, H3 } from "./typography"
 
 export const ColorBlock = styled.div`
   width: 300px;
-  margin-right: 20px;
+  margin-right: 30px;
   div {
     height: 100px;
     width: 100%;
@@ -18,7 +18,6 @@ export const ColorBlock = styled.div`
 export const ColorBlocksContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  max-width: 128rem;
 `
 
 class Colors extends Component {
@@ -54,6 +53,16 @@ class Colors extends Component {
                   <ColorBlock color="#d9d9d9">
                     <H3>Dark grey</H3>
                     <CSS>background-color: '#d9d9d9'</CSS>
+                    <div>{"  "}</div>
+                  </ColorBlock>
+                  <ColorBlock color="#000000">
+                    <H3>Black</H3>
+                    <CSS>background-color: '#000000'</CSS>
+                    <div>{"  "}</div>
+                  </ColorBlock>
+                  <ColorBlock color="#ffffff">
+                    <H3>White</H3>
+                    <CSS>background-color: '#ffffff'</CSS>
                     <div>{"  "}</div>
                   </ColorBlock>
                 </ColorBlocksContainer>

@@ -19,6 +19,12 @@ const Wrapper = styled.aside`
     margin-top: 1.5rem;
   }
 
+  p.top-navigation {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: "Roboto", sans-serif;
+  }
+
   .navigation li {
     font-size: 1.6rem;
     color: #000000;
@@ -76,9 +82,8 @@ const Navigation = props => {
           </Link>
         </li>
         <li>
-          <Link to="/grid" activeClassName="active">
-            Grid
-          </Link>
+          <p className="top-navigation">Grid</p>
+
           <br />
 
           <Link
@@ -131,10 +136,7 @@ const Navigation = props => {
           </Link>
         </li>
         <li>
-          <Link to="/design" activeClassName="active">
-            Design
-          </Link>
-          <br />
+          <p className="top-navigation">Design</p>
           <Link
             to="/colors"
             activeClassName="active"

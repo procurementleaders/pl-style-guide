@@ -10,6 +10,19 @@ const GroupWrapper = styled.section`
   h2 {
     width: 100%;
   }
+
+  a {
+    display: block-inline;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    padding: 4px 10px;
+    border-radius: 3px;
+
+    :hover {
+      text-decoration: none;
+      background-color: #f4f4f4;
+    }
+  }
 `
 
 const IconWrapper = styled.div`
@@ -53,6 +66,24 @@ class Icons extends Component {
             return (
               <>
                 <GroupWrapper>
+                  <a
+                    target="_blank"
+                    href="https://s3.eu-west-2.amazonaws.com/pl-public-assets/icons/png-pl-icon-v1.rar"
+                  >
+                    Download all PNG icons
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://s3.eu-west-2.amazonaws.com/pl-public-assets/icons/svg-pl-icon-v1.rar"
+                  >
+                    Download all SVG icons
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://s3.eu-west-2.amazonaws.com/pl-public-assets/icons/ai-pl-icon-v1.rar"
+                  >
+                    Download all AI icons
+                  </a>
                   <StaticQuery
                     query={graphql`
                       query {

@@ -4,8 +4,8 @@ import { H2, H3, H4 } from "./typography"
 import Layout, { CTX } from "../components/layout"
 import CSS from "../components/CSS"
 import LogoImg from "../images/pl-logo.svg"
-import Twitter from "../images/icons/social/twitter.svg"
-import LinkedIn from "../images/icons/social/linkedin.svg"
+import Twitter from "../images/icons/social/social-twitter.svg"
+import LinkedIn from "../images/icons/social/social-linkedin.svg"
 
 const FooterWrapper = styled.footer`
   width: 100%;
@@ -121,35 +121,34 @@ class Footer extends Component {
 
                 <H3>Footer wrapper</H3>
 
-                <CSS>{`
-                                    width: 100%;
-                                    background-color: #000000;
-                                `}</CSS>
+                <CSS>
+                  {`width: 100%;
+                    background-color: #000000;`}
+                </CSS>
 
                 <H3>Footer inner</H3>
 
                 <CSS>
                   {`width: ${1280 / baseFont}rem;
-                                    height: auto;
-                                    padding:  ${16 / baseFont}rem ${67 /
-                    baseFont}rem;`}
+                    height: auto;
+                    padding:  ${16 / baseFont}rem ${67 / baseFont}rem;`}
                 </CSS>
 
                 <H3>Links</H3>
                 <H4>a</H4>
                 <CSS>
                   {`text-decoration: none;
-                                        padding: .3rem 0;
-                                        letter-spacing: .02em;
-                                        color: #AAAAAA;
-                                        font-size:  ${14 / baseFont}rem;
-                                        display: inline-block;
-                                        font-weight: 300;`}
+                    padding: .3rem 0;
+                    letter-spacing: .02em;
+                    color: #AAAAAA;
+                    font-size:  ${14 / baseFont}rem;
+                    display: inline-block;
+                    font-weight: 300;`}
                 </CSS>
                 <H4>a:hover</H4>
                 <CSS>
                   {`color: #FFFFFF;
-                                    text-decoration: underline;`}
+                    text-decoration: underline;`}
                 </CSS>
               </>
             )

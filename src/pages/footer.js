@@ -95,7 +95,7 @@ class Footer extends Component {
           {({ baseFont }) => {
             return (
               <>
-                <H2>Footer</H2>
+                <H2>Example</H2>
 
                 <FooterWrapper>
                   <div className="inner">

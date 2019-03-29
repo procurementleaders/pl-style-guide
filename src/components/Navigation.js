@@ -97,6 +97,13 @@ const Navigation = props => {
           >
             Containers
           </Link>
+          <Link
+            to="/headers"
+            activeClassName="active"
+            className="sub-navigation"
+          >
+            Headers
+          </Link>
 
           <Link
             to="/grid-2-column"

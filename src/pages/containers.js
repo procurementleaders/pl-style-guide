@@ -55,52 +55,6 @@ class Typography extends Component {
                   margin: 0 auto;
                   padding: ${60 / baseFont}rem ${67 / baseFont}rem;`}
                 </CSS>
-
-                <H2>Header</H2>
-                <Container
-                  style={{
-                    border: "1px solid #ccc",
-                    backgroundColor: "#f4f4f4",
-                  }}
-                >
-                  <Inner
-                    style={{
-                      flexDirection: "column",
-                    }}
-                  >
-                    <H1>Page title</H1>
-                    <SubHeader>Sub header text</SubHeader>
-                  </Inner>
-                </Container>
-
-                <H3>Wrapper</H3>
-                <CSS>
-                  {`width: 100%;
-                  background-color: #f4f4f4;`}
-                </CSS>
-
-                <H3>Inner</H3>
-                <CSS>
-                  {`width: 100%;
-                  max-width: ${1280 / baseFont}rem;
-                  margin: 0 auto;
-                  padding: ${60 / baseFont}rem ${67 / baseFont}rem;`}
-                </CSS>
-
-                <H3>h1</H3>
-                <CSS>
-                  {`
-                  margin: 0;
-                  font-size: ${44 / baseFont}rem;
-                  font-family: 'Roboto', sans-serif;
-                  font-weight: 300;`}
-                </CSS>
-                <H3>p</H3>
-                <CSS>
-                  {`margin-top: ${12 / baseFont}rem;
-                  max-width: ${852 / baseFont}rem;
-                  font-size: ${16 / baseFont}rem;`}
-                </CSS>
               </>
             )
           }}

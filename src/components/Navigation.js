@@ -19,7 +19,7 @@ const Wrapper = styled.aside`
     margin-top: 1.5rem;
   }
 
-  p.top-navigation {
+  ol.navigation .top-navigation {
     margin-top: 0;
     margin-bottom: 0;
     font-family: "Roboto", sans-serif;
@@ -79,6 +79,12 @@ const Navigation = props => {
           <Link to="/">
             <LogoImage /> <br />
             Style Guides
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/" activeClassName="active" className="top-navigation">
+            Introduction
           </Link>
         </li>
 

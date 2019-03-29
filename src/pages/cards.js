@@ -92,10 +92,14 @@ class Cards extends Component {
 
                 <CSS>
                   {`width: 100%;
-                  border-radius: 3px 3px 0 0;
-                  overflow: hidden;
-                  position: relative;
-                  height: 120px;`}
+                    -webkit-border-radius: 3px 3px 0 0;
+                    -moz-border-radius: 3px 3px 0 0;
+                    -ms-border-radius: 3px 3px 0 0;
+                    -o-border-radius: 3px 3px 0 0;
+                    border-radius: 3px 3px 0 0;
+                    overflow: hidden;
+                    position: relative;
+                    height: 120px;`}
                 </CSS>
 
                 <H4>Image</H4>

@@ -25,20 +25,20 @@ export const Inner = styled.div`
   margin: 0 auto;
   padding: 6rem 6.7rem;
   display: flex;
-  h1{
-    margin:0;
+  h1 {
+    margin: 0;
   }
 `
 
 class Typography extends Component {
   render() {
     return (
-      <Layout title="Grid">
+      <Layout title="Containers">
         <CTX.Consumer>
           {({ baseFont }) => {
             return (
               <>
-                <H2>Container</H2>
+                <H2>Containers</H2>
                 <Wrapper>
                   <div className="inner">
                     <Paragraph>Inner</Paragraph>
@@ -65,7 +65,6 @@ class Typography extends Component {
                 >
                   <Inner
                     style={{
-
                       flexDirection: "column",
                     }}
                   >
@@ -90,7 +89,11 @@ class Typography extends Component {
 
                 <H3>h1</H3>
                 <CSS>
-                  {`margin: 0;`}
+                  {`
+                  margin: 0;
+                  font-size: ${44 / baseFont}rem;
+                  font-family: 'Roboto', sans-serif;
+                  font-weight: 300;`}
                 </CSS>
                 <H3>p</H3>
                 <CSS>

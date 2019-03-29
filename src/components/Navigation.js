@@ -23,6 +23,9 @@ const Wrapper = styled.aside`
     margin-top: 0;
     margin-bottom: 0;
     font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 600;
   }
 
   .navigation li {
@@ -62,6 +65,8 @@ const Wrapper = styled.aside`
 
   .navigation .sub-navigation {
     margin-left: 12px;
+    display: block;
+    padding: 0.5rem 0;
   }
 `
 
@@ -76,15 +81,16 @@ const Navigation = props => {
             Style Guides
           </Link>
         </li>
-        <li>
-          <Link to="/typography" activeClassName="active">
-            Typography
-          </Link>
-        </li>
-        <li>
-          <p className="top-navigation">Grid</p>
 
-          <br />
+        <li>
+          <p className="top-navigation">Layout</p>
+          <Link
+            to="/containers"
+            activeClassName="active"
+            className="sub-navigation"
+          >
+            Containers
+          </Link>
 
           <Link
             to="/grid-2-column"
@@ -93,7 +99,7 @@ const Navigation = props => {
           >
             2 Column Grid
           </Link>
-          <br />
+
           <Link
             to="/grid-3-column"
             activeClassName="active"
@@ -101,7 +107,7 @@ const Navigation = props => {
           >
             3 Column Grid
           </Link>
-          <br />
+
           <Link
             to="/grid-4-column"
             activeClassName="active"
@@ -110,33 +116,16 @@ const Navigation = props => {
             4 Column Grid
           </Link>
         </li>
-        <li>
-          <Link to="/buttons" activeClassName="active">
-            Buttons
-          </Link>
-        </li>
-        <li>
-          <Link to="/cards" activeClassName="active">
-            Cards
-          </Link>
-        </li>
-        <li>
-          <Link to="/icons" activeClassName="active">
-            Icons
-          </Link>
-        </li>
-        <li>
-          <Link to="/primary-navigation" activeClassName="active">
-            Primary navigation
-          </Link>
-        </li>
-        <li>
-          <Link to="/footer" activeClassName="active">
-            Footer
-          </Link>
-        </li>
+
         <li>
           <p className="top-navigation">Design</p>
+          <Link
+            to="/typography"
+            activeClassName="active"
+            className="sub-navigation"
+          >
+            Typography
+          </Link>
           <Link
             to="/colors"
             activeClassName="active"
@@ -144,7 +133,44 @@ const Navigation = props => {
           >
             Colours
           </Link>
+          <Link to="/icons" activeClassName="active" className="sub-navigation">
+            Icons
+          </Link>
         </li>
+
+        <li>
+          <p className="top-navigation">Navigation</p>
+          <Link
+            to="/navigation"
+            activeClassName="active"
+            className="sub-navigation"
+          >
+            Navigation
+          </Link>
+          <Link
+            to="/footer"
+            activeClassName="active"
+            className="sub-navigation"
+          >
+            Footer
+          </Link>
+        </li>
+
+        <li>
+          <p className="top-navigation">Component</p>
+          <Link
+            to="/buttons"
+            activeClassName="active"
+            className="sub-navigation"
+          >
+            Buttons
+          </Link>
+
+          <Link to="/cards" activeClassName="active" className="sub-navigation">
+            Cards
+          </Link>
+        </li>
+
         <li>
           <InputFont changeBaseFont={changeBaseFont} />
         </li>

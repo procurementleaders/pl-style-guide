@@ -322,6 +322,10 @@ class Icons extends Component {
                           <H3>Inverted social icons</H3>
                           <H4>svg.icon-social path {"{ }"}</H4>
                           <CSS style={{ width: "100%" }}>
+                            {`fill: #EEEEEE;`}
+                          </CSS>
+                          <H4>a:hover svg.icon-social path {"{ }"}</H4>
+                          <CSS style={{ width: "100%" }}>
                             {`fill: #FFFFFF;`}
                           </CSS>
                         </>

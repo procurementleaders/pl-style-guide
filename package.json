@@ -6,6 +6,8 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
+    "cp": "^0.2.0",
+    "cpx": "^1.5.0",
     "gatsby": "^2.1.30",
     "gatsby-image": "^2.0.32",
     "gatsby-plugin-manifest": "^2.0.23",
@@ -38,12 +40,15 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "pull": "git pull",
+    "build": "gatsby build && yarn add-domain",
     "develop": "gatsby develop",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "add-domain": "cpx CNAME ./public",
+    "deploy": "yarn build && gh-pages -d public",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
+    "dev": "gatsby develop",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {

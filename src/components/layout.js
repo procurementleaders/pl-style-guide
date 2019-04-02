@@ -19,22 +19,15 @@ export const CTX = createContext()
 const Wrapper = styled.div`
   display: flex;
   width: 100%;
-
   margin: 0 auto;
+`
+const Main = styled.div`
+  flex: 1;
   main {
-    flex: 8;
     padding: 1.5rem;
     font-size: 1.4rem;
   }
-  label{
-    font-size: 1.4rem;
-  }
-  input{
-    margin-left: 5px;
-    margin-right: 5px;
-  }
 `
-
 const Footer = styled.footer`
   padding: 3.75rem 1.5rem;
   background-color: #000;
@@ -90,7 +83,6 @@ class Layout extends Component {
         `}
         render={data => (
           <>
-            <Header title={title} siteTitle={data.site.siteMetadata.title} />
             <Helmet>
               <link
                 href="https://fonts.googleapis.com/css?family=PT+Serif|Roboto:300,400,700"
@@ -98,25 +90,19 @@ class Layout extends Component {
               />
             </Helmet>
 
-            <Wrapper>
-              <Navigation />
-              <CTX.Provider value={{ baseFont }}>
-                <main>
-                  <label htmlFor="baseFont">Base font </label>
-                  <input
-                    id="baseFont"
-                    name="baseFont"
-                    value={baseFont}
-                    onChange={this.handleChange}
-                    placeholder="Base font"
-                  />
-                  px
-                  <br />
-                  <hr />
-                  {children}
-                </main>
-              </CTX.Provider>
-            </Wrapper>
+            <CTX.Provider value={{ baseFont }}>
+              <Wrapper>
+                <Navigation
+                  changeBaseFont={this.handleChange}
+                />
+                <Main>
+                  <Header title={title} siteTitle={data.site.siteMetadata.title} />
+                  <main>
+                    {children}
+                  </main>
+                </Main>
+              </Wrapper>
+            </CTX.Provider>
 
             <Footer>
               <div className="footer-inner">

@@ -1,18 +1,21 @@
 import React from "react"
 import styled from "styled-components"
 
-const Wrapper = styled.pre`
+const Wrapper = styled.div`
   background-color: #333;
-  padding: 10px;
+  padding: 30px 10px 10px;
   position: relative;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
   min-height: 80px;
+  font-family: monospace;
+  padding-bottom: 40px;
+  color: #fff;
 
   :before {
-    content: "CSS";
+    content: "SVG Code";
     display: block;
     position: absolute;
     right: 10px;
@@ -20,18 +23,7 @@ const Wrapper = styled.pre`
     color: rgba(256, 256, 256, 0.8);
   }
 `
-const LineWrapper = styled.span``
-
-const Line = styled.span`
-  color: #ff6188;
-`
-
-const Value = styled.span`
-  color: #a9dc76;
-`
-const Divider = styled.span`
-  color: #fff;
-`
+const SVGWrapper = styled.span``
 
 const CopyButton = styled.button`
   position: absolute;
@@ -43,9 +35,9 @@ const CopyButton = styled.button`
   padding: 10px 15px;
   border-radius: 3px;
   cursor: pointer;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 
-  :hover{
+  :hover {
     background-color: rgba(256, 256, 256, 0.8);
     color: rgba(0, 0, 0, 0.8);
   }
@@ -70,26 +62,11 @@ function generateOutout(children) {
     return (
       <span
         style={{ color: "#fff" }}
-      >{`The CSS syntax highluter needs a string but received ${typeof children}.`}</span>
+      >{`The SVG syntax highluter needs a string but received ${typeof children}.`}</span>
     )
   try {
     {
-      return children
-        .replace(/\s\s+/g, " ")
-        .split(";")
-        .map(line => {
-          const parts = line.split(":")
-          if (!parts[0] || !parts[1]) return false
-          return (
-            <LineWrapper key={line}>
-              <Line className>{parts[0].trim()}</Line>
-              <Divider>: </Divider>
-              <Value>{parts[1].trim()}</Value>
-              <Divider>;</Divider>
-              <br />
-            </LineWrapper>
-          )
-        })
+      return <SVGWrapper>{children}</SVGWrapper>
     }
   } catch (error) {
     return <p>Error!</p>

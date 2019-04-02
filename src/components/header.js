@@ -4,12 +4,17 @@ import styled from "styled-components"
 import { H1 } from "./../pages/typography"
 
 const HeaderWrapper = styled.header`
+  width: 100%;
+  overflow-x: hidden;
   .header__inner {
-    padding: 3.75rem 4.1875rem;
+    padding: 3.75rem 1.5rem;
     width: 100%;
-    max-width: 128rem;
-    margin: 0 auto;
+    border-bottom: 1px solid #ccc;
   }
+`
+
+const PageTitle = styled(H1)`
+  margin: 0;
 `
 
 const Header = ({ siteTitle, title }) => (
@@ -19,7 +24,7 @@ const Header = ({ siteTitle, title }) => (
     }}
   >
     <div className="header__inner">
-      <H1>{title || siteTitle}</H1>
+      <PageTitle>{title || siteTitle}</PageTitle>
     </div>
   </HeaderWrapper>
 )

@@ -13,8 +13,11 @@ Updates the GitHub pages website
 ## Includes
 
 - [x] Typeography
-- [ ] Grid
-- [ ] Icons
-- [ ] Navigation
+- [x] Grid
+- [x] Buttons
+- [x] Cards
+- [x] Icons
+- [x] Primary navigation
+- [x] Footer
+- [ ] Design
 - [ ] Content display
-- [ ] Buttons

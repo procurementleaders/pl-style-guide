@@ -21,6 +21,10 @@ const PrimaryButton = styled.a`
   display: inline-block;
   position: relative;
 
+  :hover {
+    text-decoration: none;
+  }
+
   :before {
     content: "";
     position: absolute;
@@ -52,6 +56,9 @@ const SecondaryButton = styled.a`
   display: inline-block;
   cursor: pointer;
   position: relative;
+  :hover {
+    text-decoration: none;
+  }
 
   :before {
     content: "";
@@ -70,9 +77,6 @@ const SecondaryButton = styled.a`
 `
 const SupportingButton = styled.a`
   background-color: transparent;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -o-border-radius: 3px;
   border-radius: 3px;
   padding: 1.4rem 2.9rem;
   border: solid 1px #d1d1d1;
@@ -85,6 +89,9 @@ const SupportingButton = styled.a`
   cursor: pointer;
   position: relative;
 
+  :hover {
+    text-decoration: none;
+  }
   :before {
     content: "";
     position: absolute;
@@ -111,35 +118,51 @@ class Buttons extends Component {
               <>
                 <PrimaryButton>Primary</PrimaryButton>
                 <CSS>
-                  {`background-color: #ef7d25; color: #fff; font-size: ${14 /
-                    baseFont}rem; font-family: "Roboto", sans-serif;
+                  {`background-color: #ef7d25;
+                  color: #fff;
+                  font-size: ${14 / baseFont}rem;
+                  font-family: "Roboto", sans-serif;
                   border-radius: 3px; -webkit-border-radius: 3px;
                   -moz-border-radius: 3px; -ms-border-radius: 3px;
-                  -o-border-radius: 3px; text-transform: uppercase; padding: ${15 /
-                    baseFont}rem ${30 /
-                    baseFont}rem; letter-spacing: 2px; font-weight: 600; cursor:
+                  -o-border-radius: 3px;
+                  text-transform: uppercase;
+                  padding: ${15 / baseFont}rem ${30 / baseFont}rem;
+                    letter-spacing: 2px; font-weight: 600; cursor:
                   pointer; display: inline-block; position: relative;`}
                 </CSS>
                 <p>:before</p>
                 <CSS>
-                  {`content: ""; position: absolute; top: 0; left: 0; width: 0;
-                  bottom: 0; background: rgba(255, 255, 255, 0.2);
-                  -webkit-border-radius: 3px; -moz-border-radius: 3px;
-                  -o-border-radius: 3px; border-radius: 3px; transition: all 0.4s ease;`}
+                  {`content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 0;
+                  bottom: 0;
+                  background: rgba(255, 255, 255, 0.2);
+                  -webkit-border-radius: 3px;
+                  -moz-border-radius: 3px;
+                  -o-border-radius: 3px;
+                  border-radius: 3px;
+                  transition: all 0.4s ease;`}
                 </CSS>
                 <p>:hover:before</p>
                 <CSS>width: 100%;</CSS>
                 <hr />
-                <SecondaryButton>Seondary</SecondaryButton>
+                <SecondaryButton>Secondary</SecondaryButton>
                 <CSS>
-                  {`background-color: #d1d1d1; -webkit-border-radius: 3px;
-                  -moz-border-radius: 3px; -o-border-radius: 3px; border-radius:
-                  3px; padding: ${15 / baseFont}rem ${30 /
-                    baseFont}rem; letter-spacing: 2px; font-size:
-                  ${14 /
-                    baseFont}rem; font-family: "Roboto", sans-serif; text-transform:
-                  uppercase; font-weight: 600; display: inline-block; cursor:
-                  pointer;`}
+                  {`background-color: #d1d1d1;
+                  -webkit-border-radius: 3px;
+                  -moz-border-radius: 3px;
+                  -o-border-radius: 3px;
+                  border-radius: 3px;
+                  padding: ${15 / baseFont}rem ${30 / baseFont}rem;
+                  letter-spacing: 2px;
+                  font-size: ${14 / baseFont}rem;
+                  font-family: "Roboto", sans-serif;
+                  text-transform: uppercase;
+                  font-weight: 600;
+                  display: inline-block;
+                  cursor:pointer;`}
                 </CSS>
                 <p>:before</p>
                 <CSS>
@@ -156,7 +179,7 @@ class Buttons extends Component {
                   3px; padding: ${14 / baseFont}rem ${30 /
                     baseFont}rem; border: solid 1px #d1d1d1;
                   letter-spacing: 2px; font-size: ${14 /
-                    baseFont}rem; font-family: "Roboto", 
+                    baseFont}rem; font-family: "Roboto",
                     sans-serif; text-transform: uppercase; font-weight: 600;
                   display: inline-block; cursor: pointer; position: relative;`}
                 </CSS>

@@ -51,16 +51,6 @@ const IconWrapper = styled.div`
   }
 `
 
-const SectionTitle = styled.p`
-  color: #ef7d25;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  margin: 0;
-  letter-spacing: 2px;
-`
-
 class Icons extends Component {
   render() {
     return (

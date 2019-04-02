@@ -78,6 +78,7 @@ class Cards extends Component {
                         </CardImageWrapper>
                         <CardBody>
                           <H3>Card title</H3>
+                          {/* eslint-disable-next-line */}
                           <a href="#">READ MORE</a>
                         </CardBody>
                       </CardInner>

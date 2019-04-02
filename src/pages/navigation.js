@@ -3,8 +3,8 @@ import styled from "styled-components"
 import { H2, H3, H4 } from "./typography"
 import Layout, { CTX } from "../components/layout"
 import LogoImage from "../images/pl-logo.svg"
-import CSS from '../components/CSS'
-import SVGCode from '../components/SVGCode'
+import CSS from "../components/CSS"
+import SVGCode from "../components/SVGCode"
 
 const PrimaryNav = styled.nav`
   width: 100%;
@@ -32,7 +32,7 @@ const Logo = styled.div`
 `
 const NavLink = styled.span`
   color: #000;
-  :hover{
+  :hover {
     text-decoration: underline;
     cursor: pointer;
   }
@@ -42,11 +42,6 @@ const RightNav = styled.div`
   height: 40px;
   background: #eee;
   margin-left: auto;
-`;
-
-const Footer = styled.footer`
-  width: 100%;
-  background-color: #000;
 `
 
 class Navigation extends Component {
@@ -64,17 +59,27 @@ class Navigation extends Component {
                       <LogoImage />
                     </Logo>
                     <ol>
-                      <li><NavLink>Procurement Excellence</NavLink></li>
-                      <li><NavLink>Category Management</NavLink></li>
-                      <li><NavLink>Category Intelligence</NavLink></li>
-                      <li><NavLink>Expert Network</NavLink></li>
-                      <li><NavLink>Tools</NavLink></li>
-                      <li><NavLink>Events</NavLink></li>
+                      <li>
+                        <NavLink>Procurement Excellence</NavLink>
+                      </li>
+                      <li>
+                        <NavLink>Category Management</NavLink>
+                      </li>
+                      <li>
+                        <NavLink>Category Intelligence</NavLink>
+                      </li>
+                      <li>
+                        <NavLink>Expert Network</NavLink>
+                      </li>
+                      <li>
+                        <NavLink>Tools</NavLink>
+                      </li>
+                      <li>
+                        <NavLink>Events</NavLink>
+                      </li>
                     </ol>
 
-                    <RightNav >
-
-                    </RightNav>
+                    <RightNav />
                   </div>
                 </PrimaryNav>
 
@@ -90,7 +95,7 @@ class Navigation extends Component {
                 <CSS>
                   {`width: ${1280 / baseFont}rem;
                     height: auto;
-                    padding:  ${ 16 / baseFont}rem ${67 / baseFont}rem;
+                    padding:  ${16 / baseFont}rem ${67 / baseFont}rem;
                     `}
                 </CSS>
 
@@ -108,8 +113,22 @@ class Navigation extends Component {
 
                 <H3>Logo urls (png files)</H3>
                 <ol>
-                  <li><a href="https://www.procurementleaders.com/AcuCustom/Sitename/Icon/Logo/procurement-leaders-logo.png" target="blank">Big logo png</a></li>
-                  <li><a href="https://www.procurementleaders.com/AcuCustom/Sitename/Icon/Logo/procurement-leaders-logo-2019.png" target="blank">Small logo png</a></li>
+                  <li>
+                    <a
+                      href="https://www.procurementleaders.com/AcuCustom/Sitename/Icon/Logo/procurement-leaders-logo.png"
+                      target="blank"
+                    >
+                      Big logo png
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.procurementleaders.com/AcuCustom/Sitename/Icon/Logo/procurement-leaders-logo-2019.png"
+                      target="blank"
+                    >
+                      Small logo png
+                    </a>
+                  </li>
                 </ol>
 
                 <H3>Logo SVG</H3>
@@ -127,14 +146,10 @@ class Navigation extends Component {
                 </CSS>
 
                 <H4>svg path,svg polygon</H4>
-                <CSS>
-                  {`fill: #FFFFFF;`}
-                </CSS>
+                <CSS>{`fill: #FFFFFF;`}</CSS>
 
                 <H4>svg path.bg, svg polygon.bg</H4>
-                <CSS>
-                  {`fill: #000000;`}
-                </CSS>
+                <CSS>{`fill: #000000;`}</CSS>
 
                 <H2>Navigation links</H2>
                 <CSS>

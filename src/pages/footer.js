@@ -62,19 +62,14 @@ const Social = styled.div`
   }
 `
 
-const FooterLink = styled.span`
-  padding: 0.3rem 0;
-  letter-spacing: 0.02em;
-  color: #aaaaaa;
-  display: inline-block;
+const FooterSectionTitle = styled.p`
+  color: #ffffff;
   font-weight: 300;
-  cursor: pointer;
   font-family: Roboto, sans-serif;
-  font-size: 1.4rem;
-  :hover {
-    color: #ffffff;
-    text-decoration: underline;
-  }
+  font-size: 1.6rem;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 1.6rem;
 `
 
 export const Columns4 = styled.div`
@@ -84,6 +79,22 @@ export const Columns4 = styled.div`
 
   :last-child {
     margin-right: 0;
+  }
+`
+
+const FooterLink = styled.a`
+  padding: 0.3rem 0;
+  letter-spacing: 0.02em;
+  color: rgb(170, 170, 170);
+  display: inline-block;
+  font-weight: 300;
+  cursor: pointer;
+  font-family: Roboto, sans-serif;
+  font-size: 1.4rem;
+  width: 100%;
+  :hover {
+    color: #ffffff;
+    text-decoration: underline;
   }
 `
 
@@ -105,17 +116,42 @@ class Footer extends Component {
                       </InvertedPlLogo>
 
                       <Social>
-                        <a href="#">
+                        <a
+                          href="https://twitter.com/procurementldrs"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Twitter />
                           <span>ProcurementLDRS</span>
                         </a>
-                        <a href="#">
+                        <a
+                          href="https://www.linkedin.com/company/procurement-leaders---global-intelligence-network/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <LinkedIn />
                           <span>Procurement Leaders</span>
                         </a>
                       </Social>
                     </Columns4>
-                    <FooterLink>Example link</FooterLink>
+                    <Columns4>
+                      <FooterSectionTitle>About</FooterSectionTitle>
+                      <FooterLink>Example link</FooterLink>
+                      <FooterLink>Example link</FooterLink>
+                      <FooterLink>Example link</FooterLink>
+                    </Columns4>
+                    <Columns4>
+                      <FooterSectionTitle>About</FooterSectionTitle>
+                      <FooterLink>Example link</FooterLink>
+                      <FooterLink>Example link</FooterLink>
+                      <FooterLink>Example link</FooterLink>
+                    </Columns4>
+                    <Columns4>
+                      <FooterSectionTitle>About</FooterSectionTitle>
+                      <FooterLink>Example link</FooterLink>
+                      <FooterLink>Example link</FooterLink>
+                      <FooterLink>Example link</FooterLink>
+                    </Columns4>
                   </div>
                 </FooterWrapper>
 
@@ -140,14 +176,14 @@ class Footer extends Component {
                   {`text-decoration: none;
                     padding: .3rem 0;
                     letter-spacing: .02em;
-                    color: #AAAAAA;
+                    color: #aaaaaa;
                     font-size:  ${14 / baseFont}rem;
                     display: inline-block;
                     font-weight: 300;`}
                 </CSS>
                 <H4>a:hover</H4>
                 <CSS>
-                  {`color: #FFFFFF;
+                  {`color: #ffffff;
                     text-decoration: underline;`}
                 </CSS>
               </>

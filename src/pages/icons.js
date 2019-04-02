@@ -72,18 +72,21 @@ class Icons extends Component {
                 <GroupWrapper>
                   <a
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://s3.eu-west-2.amazonaws.com/pl-public-assets/icons/png-pl-icon-v1.rar"
                   >
                     Download all PNG icons
                   </a>
                   <a
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://s3.eu-west-2.amazonaws.com/pl-public-assets/icons/svg-pl-icon-v1.rar"
                   >
                     Download all SVG icons
                   </a>
                   <a
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://s3.eu-west-2.amazonaws.com/pl-public-assets/icons/ai-pl-icon-v1.rar"
                   >
                     Download all AI icons

@@ -71,7 +71,10 @@ class Cards extends Component {
                     <Card>
                       <CardInner>
                         <CardImageWrapper>
-                          <img src="https://www.procurementleaders.com/AcuCustom/Sitename/DAM/146/Trends-2019-cover_web_mth.jpg" />
+                          <img
+                            alt="card header"
+                            src="https://www.procurementleaders.com/AcuCustom/Sitename/DAM/146/Trends-2019-cover_web_mth.jpg"
+                          />
                         </CardImageWrapper>
                         <CardBody>
                           <H3>Card title</H3>

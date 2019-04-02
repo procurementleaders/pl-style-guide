@@ -65,9 +65,7 @@ function generateOutout(children) {
       >{`The SVG syntax highluter needs a string but received ${typeof children}.`}</span>
     )
   try {
-    {
-      return <SVGWrapper>{children}</SVGWrapper>
-    }
+    return <SVGWrapper>{children}</SVGWrapper>
   } catch (error) {
     return <p>Error!</p>
   }

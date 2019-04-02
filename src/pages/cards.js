@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 import Layout, { CTX } from "../components/layout"
-import { H2, H3 } from "./typography"
+import { H2, H3, H4 } from "./typography"
 import CSS from "../components/CSS"
 
 export const Container = styled.div`
@@ -11,20 +11,12 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
   width: 100%;
   border: solid 1px #ccc;
-  .inner {
-    width: 100%;
-    max-width: 128rem;
-    margin: 0 auto;
-    padding: 6rem 6.7rem;
-    border: solid 1px #ccc;
-  }
 `
 export const Inner = styled.div`
   width: 100%;
   max-width: 128rem;
-  margin: 0 auto;
-  padding: 6rem 6.7rem;
-  display: flex;
+  margin: left;
+  padding: 0;
 `
 
 export const Card = styled.div`
@@ -36,8 +28,8 @@ export const Card = styled.div`
   h3 {
     margin-top: 0;
   }
-
   a {
+    margin-bottom: 0;
     color: #ef7d25;
     font-weight: 700;
     font-family: "Roboto", sans-serif;
@@ -47,26 +39,13 @@ export const Card = styled.div`
   }
 `
 
-const Spacer = styled.div`
-  width: 2.6%;
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-`
-
 export const CardInner = styled.div`
   background: #fff;
-  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
-    0 3px 6px rgba(0, 0, 0, 0.23);
-  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
-    0 3px 6px rgba(0, 0, 0, 0.23);
-  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
-  min-height: 190px;
+  img {
+    border-radius: 3px 3px 0 0;
+  }
 `
 export const CardImageWrapper = styled.div`
   width: 100% !important;
@@ -75,7 +54,7 @@ export const CardImageWrapper = styled.div`
   border-bottom: 1px solid #eee;
 `
 export const CardBody = styled.div`
-  padding: 1.5rem;
+  padding: 1rem;
 `
 
 class Cards extends Component {
@@ -86,41 +65,9 @@ class Cards extends Component {
           {({ baseFont }) => {
             return (
               <>
-                <H2>Cards</H2>
+                <H2>Card</H2>
                 <Container>
                   <Inner>
-                    <Card>
-                      <CardInner>
-                        <CardImageWrapper>
-                          <img src="https://www.procurementleaders.com/AcuCustom/Sitename/DAM/146/Trends-2019-cover_web_mth.jpg" />
-                        </CardImageWrapper>
-                        <CardBody>
-                          <H3>Card title</H3>
-                          <a href="#">READ MORE</a>
-                        </CardBody>
-                      </CardInner>
-                    </Card>
-                    <Spacer>
-                      30px
-                      <br />
-                      2.6%
-                    </Spacer>
-                    <Card>
-                      <CardInner>
-                        <CardImageWrapper>
-                          <img src="https://www.procurementleaders.com/AcuCustom/Sitename/DAM/146/Trends-2019-cover_web_mth.jpg" />
-                        </CardImageWrapper>
-                        <CardBody>
-                          <H3>Card title</H3>
-                          <a href="#">READ MORE</a>
-                        </CardBody>
-                      </CardInner>
-                    </Card>
-                    <Spacer>
-                      30px
-                      <br />
-                      2.6%
-                    </Spacer>
                     <Card>
                       <CardInner>
                         <CardImageWrapper>
@@ -135,12 +82,70 @@ class Cards extends Component {
                   </Inner>
                 </Container>
 
-                <p>Card</p>
-                <CSS>border-bottom-width: 0; width: 31.6%;</CSS>
+                <H3>Card Wrapper</H3>
+                <CSS>{`border-bottom-width: 0;
+                  width: 31.6%;`}</CSS>
 
-                <p>Spacing</p>
-                <CSS>width: 30px;</CSS>
-                <CSS>width: 2.6%;</CSS>
+                <H3>Heading</H3>
+
+                <H4>Heading Wrapper</H4>
+
+                <CSS>
+                  {`width: 100%;
+                    -webkit-border-radius: 3px 3px 0 0;
+                    -moz-border-radius: 3px 3px 0 0;
+                    -ms-border-radius: 3px 3px 0 0;
+                    -o-border-radius: 3px 3px 0 0;
+                    border-radius: 3px 3px 0 0;
+                    overflow: hidden;
+                    position: relative;
+                    height: 120px;`}
+                </CSS>
+
+                <H4>Image</H4>
+
+                <CSS>
+                  {`position: absolute;
+                  top: -25%;
+                  left: 0;
+                  right:0;`}
+                </CSS>
+
+                <H3>Body</H3>
+                <H4>Body Wrapper</H4>
+                <CSS>
+                  {`padding: ${10 / baseFont}rem;
+                    width:100%;
+                    box-sizing: border-box;`}
+                </CSS>
+
+                <H4>Title</H4>
+
+                <CSS>
+                  {`font-size: ${21 / baseFont}rem;
+                    font-family: Roboto, sans-serif;
+                    font-weight: 300;
+                    margin: 0 0 ${10 / baseFont}rem;`}
+                </CSS>
+
+                <H4>Text</H4>
+
+                <CSS>
+                  {`font-size: ${16 / baseFont}rem;
+                    font-family: Roboto, sans-serif;
+                    font-weight: 300;
+                    margin: 0 0 ${10 / baseFont}rem;
+                    `}
+                </CSS>
+
+                <H4>Link</H4>
+
+                <CSS>
+                  {`color: #ef7d25;
+                    font-weight: 700;
+                    font-family: "Roboto",sans-serif;
+                    font-size: ${12 / baseFont}rem;`}
+                </CSS>
               </>
             )
           }}

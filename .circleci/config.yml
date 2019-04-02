@@ -41,4 +41,4 @@ jobs:
       - run: yarn test
 
       # deploy to GitHub pages
-      - run: npx gatsby build && npx cpx CNAME ./public && npx gh-pages -d public
+      - run: git config --global user.email "tomanagle@gmail.com" && git config --global user.name "Tom Nagle" && npx gatsby build && npx cpx CNAME ./public && npx gh-pages -d public

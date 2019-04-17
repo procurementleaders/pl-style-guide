@@ -108,6 +108,9 @@ export const CardInnerPEF = styled.div`
     text-decoration: none;
     letter-spacing: 1px;
   }
+  a:hover{
+    text-decoration: underline;
+  }
 
   ul li a{
     font-size: 1.6rem;
@@ -116,14 +119,12 @@ export const CardInnerPEF = styled.div`
     letter-spacing: 0;
     margin-bottom: 1rem;
     display:inline-block;
-
-    :hover{
-      text-decoration: underline;
-      color: #000000;
-    }
   }
 
-
+  ul li a:hover{
+    text-decoration: underline;
+    color: #000000;
+  }
 
   :hover{
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);

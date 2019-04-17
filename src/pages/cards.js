@@ -34,14 +34,18 @@ export const CardInner = styled.div`
   img {
     width: 100%;
   }
+
   h3 {
     margin-top: 0;
-    :hover{
-      text-decoration: underline;
-      color: #ef7d25;
-      cursor: pointer;
-    }
+
   }
+
+  h3:hover{
+    text-decoration: underline;
+    color: #ef7d25;
+    cursor: pointer;
+  }
+
   a {
     margin-bottom: 0;
     color: #ef7d25;
@@ -51,6 +55,11 @@ export const CardInner = styled.div`
     text-decoration: none;
     letter-spacing: 1px;
   }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
   img {
     border-radius: 3px 3px 0 0;
   }
@@ -74,7 +83,6 @@ export const CardInnerPEF = styled.div`
   width: 100%;
   position: relative;
 
-
   svg{
     width: 26px;
     height: 28px;
@@ -85,13 +93,14 @@ export const CardInnerPEF = styled.div`
   h3 {
     margin-top: 0;
     margin-bottom: 2rem;
-
-    :hover{
-      text-decoration: underline;
-      color: #ef7d25;
-      cursor: pointer;
-    }
   }
+
+  h3:hover{
+    text-decoration: underline;
+    color: #ef7d25;
+    cursor: pointer;
+  }
+
   ul{
     margin-top: 0;
     margin-bottom: 1rem;
@@ -108,6 +117,7 @@ export const CardInnerPEF = styled.div`
     text-decoration: none;
     letter-spacing: 1px;
   }
+
   a:hover{
     text-decoration: underline;
   }

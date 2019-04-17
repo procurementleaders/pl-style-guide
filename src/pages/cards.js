@@ -40,11 +40,18 @@ export const Card = styled.div`
 `
 
 export const CardInner = styled.div`
-  background: #fff;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  background: #ffffff;
   border-radius: 3px;
+  border: 1px solid #cccccc;
+  transition: all 0.3s ease;
+
   img {
     border-radius: 3px 3px 0 0;
+  }
+
+  :hover{
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
   }
 `
 export const CardImageWrapper = styled.div`
@@ -87,8 +94,34 @@ class Cards extends Component {
                 </Container>
 
                 <H3>Card Wrapper</H3>
-                <CSS>{`border-bottom-width: 0;
-                  width: 31.6%;`}</CSS>
+                <H4>Wrapper</H4>
+                <CSS>{`width: 31.6%;
+                    background: #ffffff;
+                    border: 1px solid #cccccc;
+
+                    -webkit-border-radius: 3px;
+                    -moz-border-radius: 3px;
+                    -ms-border-radius: 3px;
+                    -o-border-radius: 3px;
+                    border-radius: 3px;
+
+                    -webkit-transition: all 0.3s ease;
+                    -o-transition: all 0.3s ease;
+                    transition: all 0.3s ease;`}</CSS>
+                <H4>Wrapper :hover</H4>
+
+                <CSS>{`
+                  -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+                  -moz-box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+                  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+
+                  -webkit-transform: translateY(-4px);
+                  -ms-transform: translateY(-4px);
+                  -moz-transform: translateY(-4px);
+                  -o-transform: translateY(-4px);
+                  transform: translateY(-4px);
+
+                  `}</CSS>
 
                 <H3>Heading</H3>
 

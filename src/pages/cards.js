@@ -295,6 +295,91 @@ class Cards extends Component {
                     </CardPEF>
                   </Inner>
                 </Container>
+
+                <H3>PEF Card Wrapper</H3>
+                <H4>Wrapper</H4>
+                <CSS>{`width: 31.6%;
+                    `}</CSS>
+
+                <H4>PEF Card Inner</H4>
+                <CSS>{`
+                    background: #f4f4f4;
+                    border: 1px solid #cccccc;
+                    -webkit-border-radius: 3px;
+                    -moz-border-radius: 3px;
+                    -ms-border-radius: 3px;
+                    -o-border-radius: 3px;
+                    border-radius: 3px;
+                    -webkit-transition: all 0.3s ease;
+                    -o-transition: all 0.3s ease;
+                    transition: all 0.3s ease;`}</CSS>
+                <H4>PEF Card Inner :hover</H4>
+
+                <CSS>{`
+                  -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+                  -moz-box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+                  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+                  -webkit-transform: translateY(-4px);
+                  -ms-transform: translateY(-4px);
+                  -moz-transform: translateY(-4px);
+                  -o-transform: translateY(-4px);
+                  transform: translateY(-4px);
+                  `}</CSS>
+
+
+
+                <H4>Title PEF Card</H4>
+
+                <CSS>
+                  {`font-size: ${21 / baseFont}rem;
+                    font-family: Roboto, sans-serif;
+                    font-weight: 300;
+                    margin: 0 0 ${10 / baseFont}rem;`}
+                </CSS>
+
+                <H4>Title :hover</H4>
+
+                <CSS>
+                  {`color: #ef7d25;
+                    text-decoration: underline;`}
+                </CSS>
+
+                <H4>PEF ul</H4>
+
+                <CSS>
+                  {`padding: 0;
+                    margin-top: 0;
+                    margin-bottom: 1rem;
+                    list-style: none;
+                  `}
+                </CSS>
+
+                <H4>PEF ul li a</H4>
+
+                <CSS>
+                  {`color: #000000;
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                  `}
+                </CSS>
+
+                <H4>PEF ul li a:hover</H4>
+
+                <CSS>
+                  {`color: #000000;
+                    text-decoration: underline;
+                  `}
+                </CSS>
+
+                <H4>Link</H4>
+
+                <CSS>
+                  {`color: #ef7d25;
+                    font-weight: 700;
+                    font-family: "Roboto",sans-serif;
+                    font-size: ${12 / baseFont}rem;`}
+                </CSS>
+
               </>
             )
           }}

@@ -22,7 +22,14 @@ export const Inner = styled.div`
 
 export const Card = styled.div`
   width: 31.6%;
+`
 
+export const CardInner = styled.div`
+  border-radius: 3px;
+  border: 1px solid #cccccc;
+  transition: all 0.3s ease;
+  width: 100%;
+  position: relative;
 
   img {
     width: 100%;
@@ -44,32 +51,6 @@ export const Card = styled.div`
     text-decoration: none;
     letter-spacing: 1px;
   }
-`
-
-
-export const CardPEF = styled.div`
-  width: 31.6%;
-  background-color: #f4f4f4;
-
-
-  a {
-    margin-bottom: 0;
-    color: #ef7d25;
-    font-weight: 700;
-    font-family: "Roboto", sans-serif;
-    font-size: 1.2rem;
-    text-decoration: none;
-    letter-spacing: 1px;
-  }
-`
-
-export const CardInner = styled.div`
-  border-radius: 3px;
-  border: 1px solid #cccccc;
-  transition: all 0.3s ease;
-  width: 100%;
-  position: relative;
-
   img {
     border-radius: 3px 3px 0 0;
   }
@@ -80,13 +61,19 @@ export const CardInner = styled.div`
   }
 `
 
+export const CardPEF = styled.div`
+  width: 31.6%;
+`
+
 export const CardInnerPEF = styled.div`
+  background-color: #f4f4f4;
   border-radius: 3px;
   border: 1px solid #cccccc;
   border-bottom-color: #ef7d25;
   transition: all 0.3s ease;
   width: 100%;
   position: relative;
+
 
   svg{
     width: 26px;
@@ -119,6 +106,16 @@ export const CardInnerPEF = styled.div`
     letter-spacing: 0;
     margin-bottom: 1rem;
     display:inline-block;
+  }
+
+  a {
+    margin-bottom: 0;
+    color: #ef7d25;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2rem;
+    text-decoration: none;
+    letter-spacing: 1px;
   }
 
   :hover{
@@ -266,8 +263,8 @@ class Cards extends Component {
 
 
                 <H2>Card PEF</H2>
-                <Container>
-                  <Inner>
+                <Container style={{ paddingTop: '8px' }}>
+                  <Inner >
                     <CardPEF>
                       <CardInnerPEF>
                         <CardBody>

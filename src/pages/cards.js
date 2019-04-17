@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Layout, { CTX } from "../components/layout"
 import { H2, H3, H4 } from "./typography"
 import CSS from "../components/CSS"
+import IconSvg from "../images/icons/pro-excel/pe-Talent.svg"
 
 export const Container = styled.div`
   width: 100%;
@@ -28,6 +29,11 @@ export const Card = styled.div`
   }
   h3 {
     margin-top: 0;
+    :hover{
+      text-decoration: underline;
+      color: #ef7d25;
+      cursor: pointer;
+    }
   }
   a {
     margin-bottom: 0;
@@ -40,8 +46,24 @@ export const Card = styled.div`
   }
 `
 
+
+export const CardPEF = styled.div`
+  width: 31.6%;
+  background-color: #f4f4f4;
+
+
+  a {
+    margin-bottom: 0;
+    color: #ef7d25;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2rem;
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+`
+
 export const CardInner = styled.div`
-  background: #ffffff;
   border-radius: 3px;
   border: 1px solid #cccccc;
   transition: all 0.3s ease;
@@ -57,6 +79,54 @@ export const CardInner = styled.div`
     transform: translateY(-4px);
   }
 `
+
+export const CardInnerPEF = styled.div`
+  border-radius: 3px;
+  border: 1px solid #cccccc;
+  border-bottom-color: #ef7d25;
+  transition: all 0.3s ease;
+  width: 100%;
+  position: relative;
+
+  svg{
+    width: 26px;
+    height: 28px;
+    float: left;
+    margin-right: 10px;
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+
+    :hover{
+      text-decoration: underline;
+      color: #ef7d25;
+      cursor: pointer;
+    }
+  }
+  ul{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  ul li a{
+    font-size: 1.6rem;
+    color: #000000;
+    font-weight: 400;
+    letter-spacing: 0;
+    margin-bottom: 1rem;
+    display:inline-block;
+  }
+
+  :hover{
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transform: translateY(-4px);
+  }
+`
+
 export const CardImageWrapper = styled.div`
   width: 100% !important;
   height: 100px;
@@ -88,7 +158,6 @@ class Cards extends Component {
                         </CardImageWrapper>
                         <CardBody>
                           <H3>Card title</H3>
-                          {/* eslint-disable-next-line */}
                           <a href="#">READ MORE</a>
                         </CardBody>
                       </CardInner>
@@ -168,6 +237,13 @@ class Cards extends Component {
                     margin: 0 0 ${10 / baseFont}rem;`}
                 </CSS>
 
+                <H4>Title :hover</H4>
+
+                <CSS>
+                  {`color: #ef7d25;
+                    text-decoration: underline;`}
+                </CSS>
+
                 <H4>Text</H4>
 
                 <CSS>
@@ -186,6 +262,35 @@ class Cards extends Component {
                     font-family: "Roboto",sans-serif;
                     font-size: ${12 / baseFont}rem;`}
                 </CSS>
+
+
+
+                <H2>Card PEF</H2>
+                <Container>
+                  <Inner>
+                    <CardPEF>
+                      <CardInnerPEF>
+                        <CardBody>
+                          <H3>
+                            <IconSvg />
+                            Card title</H3>
+                          <ul>
+                            <li>
+                              <a href="#">Category Intelligence &amp; Planning</a>
+                            </li>
+                            <li>
+                              <a href="#">Category Strategy Development</a>
+                            </li>
+                            <li>
+                              <a href="#">Outsourcing</a>
+                            </li>
+                          </ul>
+                          <a href="#">GO TO TOPIC</a>
+                        </CardBody>
+                      </CardInnerPEF>
+                    </CardPEF>
+                  </Inner>
+                </Container>
               </>
             )
           }}

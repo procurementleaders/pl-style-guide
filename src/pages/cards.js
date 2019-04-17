@@ -99,15 +99,6 @@ export const CardInnerPEF = styled.div`
     list-style: none;
   }
 
-  ul li a{
-    font-size: 1.6rem;
-    color: #000000;
-    font-weight: 400;
-    letter-spacing: 0;
-    margin-bottom: 1rem;
-    display:inline-block;
-  }
-
   a {
     margin-bottom: 0;
     color: #ef7d25;
@@ -117,6 +108,22 @@ export const CardInnerPEF = styled.div`
     text-decoration: none;
     letter-spacing: 1px;
   }
+
+  ul li a{
+    font-size: 1.6rem;
+    color: #000000;
+    font-weight: 400;
+    letter-spacing: 0;
+    margin-bottom: 1rem;
+    display:inline-block;
+
+    :hover{
+      text-decoration: underline;
+      color: #000000;
+    }
+  }
+
+
 
   :hover{
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);

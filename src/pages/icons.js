@@ -7,7 +7,7 @@ import CSS from "../components/CSS"
 import SVGCode from "../components/SVGCode"
 
 const GroupWrapper = styled.section`
-  a {
+  a.button {
     display: block-inline;
     margin-right: 10px;
     border: 1px solid #ccc;
@@ -49,6 +49,21 @@ const IconWrapper = styled.div`
     height: auto;
     margin: 1rem 0;
   }
+  a.link{
+    display: block;
+    color: #333;
+    padding: 0;
+    width:100%;
+  }
+  a.link:hover {
+    text-decoration: underline;
+    color: #000;
+  }
+  p.pl{
+    font-size:1.2rem;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 5px;
+  }
 `
 
 class Icons extends Component {
@@ -61,6 +76,7 @@ class Icons extends Component {
               <>
                 <GroupWrapper>
                   <a
+                    className="button"
                     target="_blank"
                     rel="noopener noreferrer"
                     href="https://s3.eu-west-2.amazonaws.com/pl-public-assets/icons/png-pl-icon-v1.rar"
@@ -68,6 +84,7 @@ class Icons extends Component {
                     Download all PNG icons
                   </a>
                   <a
+                    className="button"
                     target="_blank"
                     rel="noopener noreferrer"
                     href="https://s3.eu-west-2.amazonaws.com/pl-public-assets/icons/svg-pl-icon-v1.rar"
@@ -75,6 +92,7 @@ class Icons extends Component {
                     Download all SVG icons
                   </a>
                   <a
+                    className="button"
                     target="_blank"
                     rel="noopener noreferrer"
                     href="https://s3.eu-west-2.amazonaws.com/pl-public-assets/icons/ai-pl-icon-v1.rar"
@@ -241,6 +259,21 @@ class Icons extends Component {
                                         return <span key={part}>{part}</span>
                                       })}
                                   </H3>
+
+                                  {item.node.name === 'company-pl' ?
+                                    <>
+                                      <p className="pl">Download PL png here:</p>
+                                      <a className="link" href='https://style.procurementleaders.com/icons/icon-48x48.png' target="_blank">48x48</a>
+                                      <a className="link" href='https://style.procurementleaders.com/icons/icon-72x72.png' target="_blank">72x72</a>
+                                      <a className="link" href='https://style.procurementleaders.com/icons/icon-96x96.png' target="_blank">96x96</a>
+                                      <a className="link" href='https://style.procurementleaders.com/icons/icon-144x144.png' target="_blank">144x144</a>
+                                      <a className="link" href='https://style.procurementleaders.com/icons/icon-192x192.png' target="_blank">192x192</a>
+                                      <a className="link" href='https://style.procurementleaders.com/icons/icon-256x256.png' target="_blank">256x256</a>
+                                      <a className="link" href='https://style.procurementleaders.com/icons/icon-384x384.png' target="_blank">384x384</a>
+                                      <a className="link" href='https://style.procurementleaders.com/icons/icon-512x512.png' target="_blank">512x512</a>
+                                    </>
+                                    : null
+                                  }
                                 </IconWrapper>
                               )
                             })}

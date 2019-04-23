@@ -49,6 +49,42 @@ export const FormWrapper = styled.form`
       width: 100%;
     }
   }
+
+  .input_text,
+  select{
+    display: block;
+    width: 100%;
+    margin: 2px 0 8px;
+    padding: 3px 6px;
+    height: 36px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+  }
+  textarea{
+    display: block;
+    width: 100%;
+    margin: 2px 0 8px;
+    padding: 3px 6px;
+    height: 80px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    resize: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+  }
+  .input_text:focus,
+  select:focus,
+  textarea:focus{
+    background-color: #f9f9f9;
+    border-color: #ef7d25;
+    outline-color: #ef7d25;
+  }
+
+  /* Radio Group */
   .radio_group{
     width: 100%;
     margin-bottom:8px;
@@ -118,38 +154,73 @@ export const FormWrapper = styled.form`
         transform: scale(1);
     }
   }
-  .input_text,
-  select{
-    display: block;
-    width: 100%;
-    margin: 2px 0 8px;
-    padding: 3px 6px;
-    height: 36px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.4rem;
-  }
-  textarea{
-    display: block;
-    width: 100%;
-    margin: 2px 0 8px;
-    padding: 3px 6px;
-    height: 80px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-sizing: border-box;
-    resize: none;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.4rem;
-  }
-  .input_text:focus,
-  select:focus,
-  textarea:focus{
-    background-color: #f9f9f9;
-    border-color: #ef7d25;
-    outline-color: #ef7d25;
+
+  /* Checkbox Group */
+  .checkbox_group{
+    label{
+      display: block;
+      position: relative;
+      padding-left: 26px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      font-size: 1.4rem;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      line-height: 21px;
+      font-family: 'Roboto', sans-serif;
+    }
+    input[type=checkbox]{
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+    .box{
+      background-color: #ffffff;
+      border: 1px solid #cccccc;
+      border-radius: 3px;
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      height: 20px;
+      width: 20px;
+    }
+    :hover input ~ .box {
+      background-color: #f4f4f4;
+    }
+    :hover input ~ .box:after {
+      border: solid #666;
+      border-width: 0 2px 2px 0;
+      display: block;
+    }
+    input:checked ~ .box {
+      background-color: #ffffff;
+    }
+    .box:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+    input:checked ~ .box:after {
+      display: block;
+      border: solid #000;
+      border-width: 0 2px 2px 0;
+    }
+    .box:after {
+      left: 6px;
+      top: 2px;
+      width: 5px;
+      height: 10px;
+      border: solid #000;
+      border-width: 0 2px 2px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
   }
 `
 
@@ -187,10 +258,8 @@ class Form extends Component {
                     <p class="label"><span>Radio group:</span></p>
                     <input class="input_radio" type="radio" value="first" name="choices" id="choice-first" />
                     <label class="label_radio" for="choice-first">First choice</label>
-
                     <input class="input_radio" type="radio" value="second" name="choices" id="choice-second" />
                     <label class="label_radio" for="choice-second">Second choice</label>
-
                   </div>
 
                   <label htmlFor="textarea">
@@ -199,6 +268,15 @@ class Form extends Component {
                   <textarea type="textarea" id="textarea" name="textarea" className="input_textarea">
                     This is a text area field
                   </textarea>
+
+                  <div className="checkbox_group">
+                    <label for="privacy" class="checkbox_label">
+                      Agree to Terms and Conditions
+                      <input type="checkbox" name="privacy" id="privacy" value="1" class="input_checkbox" />
+                      <span class="box"></span>
+                    </label>
+                  </div>
+
                 </FormWrapper>
                 <H3>Form wrapper</H3>
                 <CSS>

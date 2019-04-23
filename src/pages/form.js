@@ -35,6 +35,7 @@ export const FormWrapper = styled.form`
   padding: 2rem 1.6rem;
   background-color: #dddddd;
 
+  .label,
   label{
     display: block;
     width: 100%;
@@ -48,7 +49,75 @@ export const FormWrapper = styled.form`
       width: 100%;
     }
   }
-
+  .radio_group{
+    width: 100%;
+    margin-bottom:8px;
+    :after{
+      display: block;
+      clear: both;
+      content: '';
+    }
+    .label_radio{
+      font-size: 1.4rem;
+      font-weight: 300;
+      font-family: 'Roboto', sans-serif;
+      cursor: pointer;
+      float: left;
+      width: inherit;
+    }
+    [type="radio"]:checked,
+    [type="radio"]:not(:checked) {
+        position: absolute;
+        left: -9999px;
+    }
+    [type="radio"]:checked + label,
+    [type="radio"]:not(:checked) + label
+    {
+        position: relative;
+        padding-left: 28px;
+        cursor: pointer;
+        line-height: 22px;
+        margin-bottom: 4px;
+        display: inline-block;
+        color: #666;
+        box-sizing: border-box;
+    }
+    [type="radio"]:checked + label:before,
+    [type="radio"]:not(:checked) + label:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 18px;
+        height: 18px;
+        border: 1px solid #ccc;
+        border-radius: 100%;
+        background: #fff;
+    }
+    [type="radio"]:checked + label:after,
+    [type="radio"]:not(:checked) + label:after {
+        content: '';
+        width: 12px;
+        height: 12px;
+        background: #ef7d25;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        border-radius: 100%;
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+    }
+    [type="radio"]:not(:checked) + label:after {
+        opacity: 0;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    [type="radio"]:checked + label:after {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+  }
   .input_text,
   select{
     display: block;
@@ -62,7 +131,6 @@ export const FormWrapper = styled.form`
     font-family: 'Roboto', sans-serif;
     font-size: 1.4rem;
   }
-
   textarea{
     display: block;
     width: 100%;
@@ -76,7 +144,6 @@ export const FormWrapper = styled.form`
     font-family: 'Roboto', sans-serif;
     font-size: 1.4rem;
   }
-
   .input_text:focus,
   select:focus,
   textarea:focus{
@@ -115,6 +182,16 @@ class Form extends Component {
                     <option value="Third Choice">Third Choice</option>
                     <option value="Fourth Choice">Fourth Choice</option>
                   </select>
+
+                  <div class="radio_group">
+                    <p class="label"><span>Radio group:</span></p>
+                    <input class="input_radio" type="radio" value="first" name="choices" id="choice-first" />
+                    <label class="label_radio" for="choice-first">First choice</label>
+
+                    <input class="input_radio" type="radio" value="second" name="choices" id="choice-second" />
+                    <label class="label_radio" for="choice-second">Second choice</label>
+
+                  </div>
 
                   <label htmlFor="textarea">
                     <span>Textarea</span>

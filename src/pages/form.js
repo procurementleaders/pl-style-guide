@@ -196,7 +196,7 @@ class Form extends Component {
                   `}
                 </CSS>
 
-                <H3>:focus</H3>
+                <H3>input:focus, select:focus, textarea:focus</H3>
 
                 <CSS>
                   {`

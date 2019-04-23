@@ -182,6 +182,10 @@ const Navigation = props => {
           <Link to="/cards" activeClassName="active" className="sub-navigation">
             Cards
           </Link>
+
+          <Link to="/form" activeClassName="active" className="sub-navigation">
+            Form
+          </Link>
         </li>
 
         <li>

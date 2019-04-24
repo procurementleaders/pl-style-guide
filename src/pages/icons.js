@@ -10,8 +10,8 @@ const GroupWrapper = styled.section`
   a.button {
     display: block-inline;
     margin-right: 10px;
-    border: 1px solid #ccc;
-    padding: 4px 10px;
+    border: 1px solid #cccccc;
+    padding: 10px;
     border-radius: 3px;
 
     :hover {
@@ -79,26 +79,11 @@ class Icons extends Component {
                     className="button"
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://s3.eu-west-2.amazonaws.com/pl-public-assets/icons/png-pl-icon-v1.rar"
+                    href="https://s3.eu-west-2.amazonaws.com/pl-public-assets/icons/PL-icons-v1-April-2019.rar"
                   >
-                    Download all PNG icons
+                    Download all icons
                   </a>
-                  <a
-                    className="button"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://s3.eu-west-2.amazonaws.com/pl-public-assets/icons/svg-pl-icon-v1.rar"
-                  >
-                    Download all SVG icons
-                  </a>
-                  <a
-                    className="button"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://s3.eu-west-2.amazonaws.com/pl-public-assets/icons/ai-pl-icon-v1.rar"
-                  >
-                    Download all AI icons
-                  </a>
+
                   <StaticQuery
                     query={graphql`
                       query {

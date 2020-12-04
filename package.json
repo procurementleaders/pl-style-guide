@@ -22,7 +22,7 @@
     "gatsby-transformer-remark": "^2.6.21",
     "gatsby-transformer-sharp": "^2.2.13",
     "gh-pages": "^2.1.1",
-    "highlight.js": "^9.15.10",
+    "highlight.js": "^10.4.1",
     "prismjs": "^1.17.1",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
